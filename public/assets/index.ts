@@ -14,6 +14,9 @@ import ecommerceMarketing from "./images/ecommerce-marketing.gif";
 import contentMarketing from "./images/content-marketing.gif";
 import emailMarketing from "./images/email-marketing.gif";
 import threeDVisualization from "./images/3d-visualization.gif";
+import ScheduleGradient from "./images/schedule-gradient.png";
+import scheduleMagnet from "./images/scheduleMagnet.png";
+import magnetBg from "./images/magnet-bg.svg";
 
 
 
@@ -49,6 +52,9 @@ export const IMAGES = {
   emailMarketing,
   threeDVisualization,
   hoeItWorksLines,
+  ScheduleGradient,
+  scheduleMagnet,
+  magnetBg,
 };
 
 export const ICONS = {
