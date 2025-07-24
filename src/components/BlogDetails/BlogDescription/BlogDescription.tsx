@@ -45,9 +45,14 @@ const BlogSection: React.FC<BlogSectionProps> = ({
           </nav>
 
           {/* Description */}
-          <section className="w-[70%] text-neutral-15 text-[22px] leading-7">
-            {descriptionContent}
-          </section>
+          <p className="text-neutral-15 leading-7 text-[22px] font-Satoshi w-[70%]">
+            nfrastructure inspections are essential for maintaining the safety
+            of assets like bridges, dams, and power lines. However, traditional
+            methods face many challenges, including safety risks, slow
+            processes, and human errors. As technology evolves, automated docked
+            drone workflows offer a more efficient, scalable, and safer
+            solution.
+          </p>
         </div>
       </Container>
     </div>
