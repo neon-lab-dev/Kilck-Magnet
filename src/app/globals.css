@@ -1,26 +1,59 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi-Bold.otf") format("opentype");
+  font-weight: 700;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi-Bold.otf") format("opentype");
+  font-weight: 900;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi-Regular.otf") format("opentype");
+  font-weight: 400;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi-Medium.otf") format("opentype");
+  font-weight: 500;
+}
+
+@theme {
+  /* Fonts */
+  --font-Satoshi: Satoshi, sans-serif;
+
+  /* Colors */
+
+  /* Primary */
+
+  --color-primary-10: #fb2c36;
+  --color-primary-15: #ff6467;
+
+  /* neutral */
+
+  --color-neutral-10: #27272a;
+  --color-neutral-15: #3f3f47;
+  --color-neutral-20: #71717b;
+  --color-neutral-25: #9f9fa9;
+  --color-neutral-30: #252525cc;
+
+  /* Shadows */
+  --shadow-footer: 0px -2px 14px 0px rgba(0, 0, 0, 0.2);
+
+  /* Gradients */
+  --bg-gradient-primary: linear-gradient(
+    90deg,
+    rgba(255, 120, 0, 0.1) 19.52%,
+    rgba(255, 230, 1, 0.1) 137.52%
+  );
+}
+
+.bg-gradient-future-roadmap {
+  background: var(--bg-gradient-future-roadmap);
 }
