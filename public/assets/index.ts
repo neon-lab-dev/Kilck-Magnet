@@ -35,6 +35,13 @@ import google from "./icons/google.png";
 import phone from "./icons/phone.svg";
 import email from "./icons/email.svg";
 import location from "./icons/location.svg";
+import phoneGray from "./icons/phone-gray.svg";
+import emailGray from "./icons/email-gray.svg";
+import locationGray from "./icons/location-gray.svg";
+import facebook from "./icons/facebook.svg";
+import instagram from "./icons/instagram.svg";
+import linkedin from "./icons/linkedin.svg";
+import youtube from "./icons/youtube.svg";
 
 export const IMAGES = {
   heroImage,
@@ -73,4 +80,11 @@ export const ICONS = {
   phone,
   email,
   location,
+  phoneGray,
+  emailGray,
+  locationGray,
+  facebook,
+  instagram,
+  linkedin,
+  youtube,
 };

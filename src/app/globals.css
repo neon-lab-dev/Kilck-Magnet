@@ -60,6 +60,7 @@
   --color-neutral-75: #1E293B; /* 40 */
   --color-neutral-80: #64748B; /* 45 */
   --color-neutral-85: #3F3F47;
+  --color-neutral-90: #FAFAFA;
 
   /* Shadows */
   --shadow-primary-button: 0 -2px 2px 0 rgba(255, 255, 255, 0.05) inset, 0 12px 64px 0 rgba(255, 23, 40, 0.50);
