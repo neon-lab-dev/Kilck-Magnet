@@ -30,7 +30,7 @@ const FAQ = () => {
 
   return (
     <Container>
-      <div className="font-Satoshi flex justify-between w-full py-[64px]">
+      <div className="font-Satoshi flex justify-between w-full py-[128px]">
         <h1 className="text-[36px] font-bold leading-10 text-neutral-85 max-w-[300px]">
           Frequently Asked Questions
         </h1>
