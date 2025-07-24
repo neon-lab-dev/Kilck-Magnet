@@ -1,14 +1,10 @@
-import BlogsCards from '@/components/Blogs/BlogsCards'
+import BlogsSection from '@/components/Blogs/BlogsSection'
 import React from 'react'
 
 const page = () => {
   return (
     <div>
-     <div className="grid grid-cols-4 gap-16">
-        <BlogsCards/>
-        <BlogsCards/>
-        <BlogsCards/>
-     </div>
+    <BlogsSection/>
     </div>
   )
 }
