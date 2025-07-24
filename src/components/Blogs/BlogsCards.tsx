@@ -22,16 +22,19 @@ const BlogsCards: React.FC<BlogsCardsProps> = ({
   classNames,
 }) => {
   return (
-    <div className={`bg-white rounded-xl space-y-4 font-Satoshi flex-shrink-0 ${classNames} `}>
-      <Image src={image} alt={title} className="rounded-xl w-full" />
-      <div className="space-y-2">
+    <div className={`bg-white rounded-xl flex flex-col justify-between space-y-4 font-Satoshi flex-shrink-0 ${classNames} `}>
+      <div>
+        <Image src={image} alt={title} className="rounded-xl w-full" />
+      <div className="space-y-2 mt-5">
         <h3 className="text-neutral-10 font-bold leading-6 text-xl">
           {title}
         </h3>
-        <p className="line-clamp-3 text-neutral-35 text-lg leading-7">
+        <p className="line-clamp-3 text-neutral-70 text-lg leading-7">
           {description}
         </p>
       </div>
+      </div>
+      
       {onClick && (
         <button
           onClick={onClick}

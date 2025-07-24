@@ -8,13 +8,13 @@ type TocItem = {
 
 type BlogSectionProps = {
   tocItems: TocItem[];
-  descriptionContent: React.ReactNode;
+//   descriptionContent: React.ReactNode;
   tocTitle?: string;
 };
 
 const BlogSection: React.FC<BlogSectionProps> = ({
   tocItems,
-  descriptionContent,
+//   descriptionContent,
   tocTitle = "Table of Contents",
 }) => {
   return (
@@ -31,7 +31,7 @@ const BlogSection: React.FC<BlogSectionProps> = ({
             </h3>
             <ul className="list-disc text-neutral-15 text-xl leading-6 space-y-3 pl-5">
               {tocItems.map(({ label, href }, idx) => (
-                <li key={idx} className="hover:text-primary-10">
+                <li key={idx} className="">
                   {href ? (
                     <a href={href} className="hover:underline">
                       {label}

@@ -31,6 +31,7 @@ import launch from "./icons/launch.svg";
 import maintenance from "./icons/maintainance.svg";
 import starts from "./icons/starts.svg";
 import google from "./icons/google.png";
+import rightArrowGray from "./icons/righ-arrow-gray.svg";
 
 export const IMAGES = {
   heroImage,
@@ -65,4 +66,5 @@ export const ICONS = {
   maintenance,
   starts,
   google,
+  rightArrowGray,
 };
