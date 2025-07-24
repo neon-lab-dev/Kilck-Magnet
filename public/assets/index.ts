@@ -29,6 +29,8 @@ import design from "./icons/design.svg";
 import development from "./icons/development.svg";
 import launch from "./icons/launch.svg";
 import maintenance from "./icons/maintainance.svg";
+import starts from "./icons/starts.svg";
+import google from "./icons/google.png";
 
 export const IMAGES = {
   heroImage,
@@ -61,4 +63,6 @@ export const ICONS = {
   development,
   launch,
   maintenance,
+  starts,
+  google,
 };

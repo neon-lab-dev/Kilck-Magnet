@@ -37,6 +37,7 @@
   --color-primary-20: #FFA2A2;
   --color-primary-25: #FFC9C9;
   --color-primary-30: #FFE2E2;
+  --color-primary-35: #460809;
 
   /* neutral */
 
@@ -51,6 +52,7 @@
   --color-neutral-50: #ffffffbf;
   --color-neutral-55: #E4E4E7;
   --color-neutral-60: #3F3F47;
+  --color-neutral-65: #18181B;
 
   /* Shadows */
   --shadow-primary-button: 0 -2px 2px 0 rgba(255, 255, 255, 0.05) inset, 0 12px 64px 0 rgba(255, 23, 40, 0.50);

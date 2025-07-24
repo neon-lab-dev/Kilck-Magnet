@@ -1,4 +1,5 @@
 import AboutUs from "@/components/HomePage/AboutUs/AboutUs";
+import GoogleReviews from "@/components/HomePage/GoogleReviews/GoogleReviews";
 import OurMetrics from "@/components/HomePage/OurMetrics/OurMetrics";
 import OurServices from "@/components/HomePage/OurServices/OurServices";
 import ProudPartners from "@/components/HomePage/ProudPartners/ProudPartners";
@@ -16,6 +17,7 @@ export default function Home() {
      {/* absolute top-[600px] w-full */}
      </div>
      <HowWeWork/>
+     <GoogleReviews/>
     </div>
   );
 }
