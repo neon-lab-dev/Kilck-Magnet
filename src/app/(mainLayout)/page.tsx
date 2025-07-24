@@ -3,6 +3,7 @@ import GoogleReviews from "@/components/HomePage/GoogleReviews/GoogleReviews";
 import OurMetrics from "@/components/HomePage/OurMetrics/OurMetrics";
 import OurServices from "@/components/HomePage/OurServices/OurServices";
 import ProudPartners from "@/components/HomePage/ProudPartners/ProudPartners";
+import ContactUs from "@/components/Shared/ContactUs/ContactUs";
 import HowWeWork from "@/components/Shared/HowWeWork/HowWeWork";
 
 
@@ -18,6 +19,7 @@ export default function Home() {
      </div>
      <HowWeWork/>
      <GoogleReviews/>
+     <ContactUs/>
     </div>
   );
 }

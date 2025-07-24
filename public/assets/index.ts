@@ -5,6 +5,7 @@ import dummyLogo from "./images/dummy-logo.png";
 import aboutUs from "./images/about-us.png";
 import ourService from "./images/our-service.png";
 import hoeItWorksLines from "./images/how-we-work-lines.png";
+import contactUsLines from "./images/contactus-lines.png";
 // Services
 import websiteDesign from "./images/website.gif";
 import graphicsDesign from "./images/graphics-design.gif";
@@ -31,6 +32,9 @@ import launch from "./icons/launch.svg";
 import maintenance from "./icons/maintainance.svg";
 import starts from "./icons/starts.svg";
 import google from "./icons/google.png";
+import phone from "./icons/phone.svg";
+import email from "./icons/email.svg";
+import location from "./icons/location.svg";
 
 export const IMAGES = {
   heroImage,
@@ -48,6 +52,7 @@ export const IMAGES = {
   emailMarketing,
   threeDVisualization,
   hoeItWorksLines,
+  contactUsLines,
 };
 
 export const ICONS = {
@@ -65,4 +70,7 @@ export const ICONS = {
   maintenance,
   starts,
   google,
+  phone,
+  email,
+  location,
 };
