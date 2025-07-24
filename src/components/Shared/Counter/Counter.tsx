@@ -13,7 +13,7 @@ const Counter = () => {
     <div className="bg-primary-30 font-Satoshi py-16 ">
       <Container>
         <h2 className="text-neutral-10 text-center text-5xl font-black leading-14 tracking-[-1px] mb-9 ">
-          Our Numbers Speak for Themselves.
+          Our Numbers Speak for  <span className="text-primary-10"> Themselves..</span>
         </h2>
         <div className="flex flex-wrap item-center p-6 justify-center gap-x-9">
           {counters.map((item, index) => (
