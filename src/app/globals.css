@@ -34,6 +34,7 @@
 
   --color-primary-10: #fb2c36;
   --color-primary-15: #ff6467;
+  --color-primary-20: #FFA2A2;
 
   /* neutral */
 
@@ -43,18 +44,18 @@
   --color-neutral-25: #9f9fa9;
   --color-neutral-30: #252525cc;
   --color-neutral-35: #06050B;
+  --color-neutral-40: #ffffff1a;
+  --color-neutral-45: #ffffff40;
+  --color-neutral-50: #ffffffbf;
 
   /* Shadows */
-  --shadow-footer: 0px -2px 14px 0px rgba(0, 0, 0, 0.2);
+  --shadow-primary-button: 0 -2px 2px 0 rgba(255, 255, 255, 0.05) inset, 0 12px 64px 0 rgba(255, 23, 40, 0.50);
+  --shadow-our-partners: 0 4px 28px 0 var(--zinc-100, #F4F4F5);
 
   /* Gradients */
-  --bg-gradient-primary: linear-gradient(
-    90deg,
-    rgba(255, 120, 0, 0.1) 19.52%,
-    rgba(255, 230, 1, 0.1) 137.52%
-  );
+  --bg-gradient-primary: linear-gradient(180deg, var(--red-400, #FF6467) 0%, var(--red-500, #FB2C36) 100%);
 }
 
-.bg-gradient-future-roadmap {
-  background: var(--bg-gradient-future-roadmap);
+.bg-gradient-primary {
+  background: var(--bg-gradient-primary);
 }
