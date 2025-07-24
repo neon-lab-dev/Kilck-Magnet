@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useRouter } from "next/navigation";
-import { ICONS, IMAGES } from "../../../public/assets";
+import { IMAGES } from "../../../public/assets";
 import BlogsCards from "./BlogsCards";
 import Container from "../Reusable/Container/Container";
 
@@ -42,14 +42,13 @@ const BlogsSection = () => {
 
   return (
     <Container>
-        <div className="grid grid-cols-4 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 my-24">
       {blogsData.map((blog) => (
         <BlogsCards
           key={blog.id}
           title={blog.title}
           description={blog.description}
           image={blog.image}
-          icon={ICONS.rightArrow}
           onClick={() => router.push(`/blogs/${blog.id}`)}
         />
       ))}

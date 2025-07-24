@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image, { StaticImageData } from "next/image";
+import { ICONS } from "../../../public/assets";
 
 type BlogsCardsProps = {
   title: string;
@@ -9,7 +10,7 @@ type BlogsCardsProps = {
   image: string | StaticImageData;
   onClick?: () => void;
   buttonLabel?: string;
-  icon?: string | StaticImageData;
+  classNames?: string;
 };
 
 const BlogsCards: React.FC<BlogsCardsProps> = ({
@@ -18,10 +19,10 @@ const BlogsCards: React.FC<BlogsCardsProps> = ({
   image,
   onClick,
   buttonLabel = "Read more",
-  icon,
+  classNames,
 }) => {
   return (
-    <div className="bg-white rounded-xl space-y-4 font-Satoshi">
+    <div className={`bg-white rounded-xl space-y-4 font-Satoshi flex-shrink-0 ${classNames} `}>
       <Image src={image} alt={title} className="rounded-xl w-full" />
       <div className="space-y-2">
         <h3 className="text-neutral-10 font-bold leading-6 text-xl">
@@ -37,7 +38,7 @@ const BlogsCards: React.FC<BlogsCardsProps> = ({
           className="cursor-pointer flex justify-start items-center gap-2 text-lg font-medium leading-6 tracking-[-0.6px] text-primary-10"
         >
           <span>{buttonLabel}</span>
-          {icon && <Image src={icon} alt="icon" className="size-5" />}
+          <Image src={ICONS.rightArrow} alt="icon" className="size-5" />
         </button>
       )}
     </div>
