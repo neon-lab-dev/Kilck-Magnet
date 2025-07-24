@@ -43,6 +43,9 @@
   --color-neutral-25: #9f9fa9;
   --color-neutral-30: #252525cc;
   --color-neutral-35: #52525c;
+  --color-neutral-40: #1E293B;
+  --color-neutral-45: #64748B;
+
 
   /* Shadows */
   --shadow-footer: 0px -2px 14px 0px rgba(0, 0, 0, 0.2);

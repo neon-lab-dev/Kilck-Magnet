@@ -68,6 +68,7 @@ const BlogCarousal = () => {
   return (
     <div>
       <Container>
+        <h3 className=' bg-primary-10 text-white px-2 text-[40px] font-bold tracking-[-0.8px] w-fit mb-14'>Latest blogs</h3>
         <div
       className="flex gap-8 overflow-x-auto scrollbar-none p-4"
       style={{ scrollBehavior: "smooth" }}
