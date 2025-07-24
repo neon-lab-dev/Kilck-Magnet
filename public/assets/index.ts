@@ -4,6 +4,7 @@ import dummyBlogImage from "./images/blog-dummy-image.png";
 import dummyLogo from "./images/dummy-logo.png";
 import aboutUs from "./images/about-us.png";
 import ourService from "./images/our-service.png";
+import hoeItWorksLines from "./images/how-we-work-lines.png";
 // Services
 import websiteDesign from "./images/website.gif";
 import graphicsDesign from "./images/graphics-design.gif";
@@ -23,6 +24,11 @@ import experience from "./icons/experience.svg";
 import globalPartners from "./icons/global-partners.svg";
 import projects from "./icons/projects.svg";
 import clients from "./icons/clients.svg";
+import planning from "./icons/planning.svg";
+import design from "./icons/design.svg";
+import development from "./icons/development.svg";
+import launch from "./icons/launch.svg";
+import maintenance from "./icons/maintainance.svg";
 
 export const IMAGES = {
   heroImage,
@@ -39,6 +45,7 @@ export const IMAGES = {
   contentMarketing,
   emailMarketing,
   threeDVisualization,
+  hoeItWorksLines,
 };
 
 export const ICONS = {
@@ -49,4 +56,9 @@ export const ICONS = {
   globalPartners,
   projects,
   clients,
+  planning,
+  design,
+  development,
+  launch,
+  maintenance,
 };
