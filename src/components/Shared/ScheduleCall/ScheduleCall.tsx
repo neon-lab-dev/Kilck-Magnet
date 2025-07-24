@@ -7,7 +7,7 @@ const ScheduleCall = () => {
   return (
     <Container>
       <div
-      className="relative space-y-8 rounded-[40px] p-16 font-Satoshi "
+      className="relative space-y-8 rounded-[40px] p-16 font-Satoshi max-w-[1218px] mx-auto shadow-schedule-call"
       style={{
         background: "linear-gradient(180deg, #FF6467 0%, #FB2C36 100%)"
       }}
@@ -18,14 +18,14 @@ const ScheduleCall = () => {
 
 
       <div className="space-y-4">
-        <h2 className="text-5xl w-[45%] font-[900] text-white leading-14 ">
+        <h2 className="text-5xl w-[45%] font-black text-white leading-14">
           Ready to Elevate Your Brand?
         </h2>
         <p className="text-2xl  leading-7 text-primary-30 font-medium ">
         Let’s team up and turn your vision into results.
         </p>
       </div>
-      <button className="bg-white shadow-secondary-button py-6 px-8 rounded-[12px] text-primary-10 text-xl font-bold leading-6 mt-8 flex items-center gap-[10px] w-fit">
+      <button className="bg-white shadow-secondary-button py-5 px-8 rounded-[12px] text-primary-10 text-xl font-bold leading-6 mt-8 flex items-center gap-[10px] w-fit">
         Schedule a Call
         <Image src={ICONS.rightArrow} alt="" className="size-6" />
       </button>

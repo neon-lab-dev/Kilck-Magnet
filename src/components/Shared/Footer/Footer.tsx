@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { ICONS } from "../../../../public/assets";
 import Container from "@/components/Reusable/Container/Container";
+import ScheduleCall from "../ScheduleCall/ScheduleCall";
 
 const Footer = () => {
   const footerLinks = [
@@ -104,7 +105,10 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="bg-neutral-90 font-Satoshi pt-[180px] pb-[64px]">
+    <div className="bg-neutral-90 relative font-Satoshi pt-[180px] pb-[64px] mt-72">
+         <div className="absolute w-full -top-72">
+            <ScheduleCall/>
+         </div>
       <Container>
         <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-20 ">
           {/* Left side logo and description */}

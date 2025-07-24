@@ -7,21 +7,22 @@ import ContactUs from "@/components/Shared/ContactUs/ContactUs";
 import FAQ from "@/components/Shared/FAQ/FAQ";
 import HowWeWork from "@/components/Shared/HowWeWork/HowWeWork";
 
-
 export default function Home() {
   return (
     <div>
-     <ProudPartners/>
-     <AboutUs/>
-     <div className="">
-      <OurMetrics/>
-     <div className=""><OurServices/></div>
-     {/* absolute top-[600px] w-full */}
-     </div>
-     <HowWeWork/>
-     <GoogleReviews/>
-     <ContactUs/>
-     <FAQ/>
+      <ProudPartners />
+      <AboutUs />
+      <div className="">
+        <OurMetrics />
+        <div className="">
+          {/* <OurServices /> */}
+        </div>
+        {/* absolute top-[600px] w-full */}
+      </div>
+      {/* <HowWeWork />
+      <GoogleReviews />
+      <ContactUs />
+      <FAQ /> */}
     </div>
   );
 }
