@@ -35,6 +35,8 @@
   --color-primary-10: #fb2c36;
   --color-primary-15: #ff6467;
   --color-primary-20: #FFA2A2;
+  --color-primary-25: #FFC9C9;
+  --color-primary-30: #FFE2E2;
 
   /* neutral */
 
@@ -47,10 +49,15 @@
   --color-neutral-40: #ffffff1a;
   --color-neutral-45: #ffffff40;
   --color-neutral-50: #ffffffbf;
+  --color-neutral-55: #E4E4E7;
+  --color-neutral-60: #3F3F47;
 
   /* Shadows */
   --shadow-primary-button: 0 -2px 2px 0 rgba(255, 255, 255, 0.05) inset, 0 12px 64px 0 rgba(255, 23, 40, 0.50);
+  --shadow-primary-button2: 0 -2px 2px 0 rgba(255, 255, 255, 0.05) inset, 0 12px 45px 0 var(--red-200, #FFC9C9);
+  --shadow-secondary-button: 0 -2px 2px 0 rgba(255, 255, 255, 0.05) inset, 0 12px 45px 0 rgba(255, 162, 162, 0.50);
   --shadow-our-partners: 0 4px 28px 0 var(--zinc-100, #F4F4F5);
+  --shadow-our-service: 0 8px 22px 0 rgba(0, 0, 0, 0.03);
 
   /* Gradients */
   --bg-gradient-primary: linear-gradient(180deg, var(--red-400, #FF6467) 0%, var(--red-500, #FB2C36) 100%);
