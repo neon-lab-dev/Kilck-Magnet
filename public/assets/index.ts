@@ -15,6 +15,9 @@ import ecommerceMarketing from "./images/ecommerce-marketing.gif";
 import contentMarketing from "./images/content-marketing.gif";
 import emailMarketing from "./images/email-marketing.gif";
 import threeDVisualization from "./images/3d-visualization.gif";
+import ScheduleGradient from "./images/schedule-gradient.png";
+import scheduleMagnet from "./images/scheduleMagnet.png";
+import magnetBg from "./images/magnet-bg.svg";
 
 
 
@@ -32,6 +35,7 @@ import launch from "./icons/launch.svg";
 import maintenance from "./icons/maintainance.svg";
 import starts from "./icons/starts.svg";
 import google from "./icons/google.png";
+import rightArrowGray from "./icons/righ-arrow-gray.svg";
 import phone from "./icons/phone.svg";
 import email from "./icons/email.svg";
 import location from "./icons/location.svg";
@@ -59,6 +63,9 @@ export const IMAGES = {
   emailMarketing,
   threeDVisualization,
   hoeItWorksLines,
+  ScheduleGradient,
+  scheduleMagnet,
+  magnetBg,
   contactUsLines,
 };
 
@@ -77,6 +84,7 @@ export const ICONS = {
   maintenance,
   starts,
   google,
+  rightArrowGray,
   phone,
   email,
   location,
