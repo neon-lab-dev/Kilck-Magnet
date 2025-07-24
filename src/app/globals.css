@@ -46,6 +46,8 @@
   --color-neutral-20: #71717b;
   --color-neutral-25: #9f9fa9;
   --color-neutral-30: #252525cc;
+ 
+
   --color-neutral-35: #06050B;
   --color-neutral-40: #ffffff1a;
   --color-neutral-45: #ffffff40;
@@ -53,6 +55,10 @@
   --color-neutral-55: #E4E4E7;
   --color-neutral-60: #3F3F47;
   --color-neutral-65: #18181B;
+  
+   --color-neutral-70: #52525c; /* 35 */
+  --color-neutral-75: #1E293B; /* 40 */
+  --color-neutral-80: #64748B; /* 45 */
 
   /* Shadows */
   --shadow-primary-button: 0 -2px 2px 0 rgba(255, 255, 255, 0.05) inset, 0 12px 64px 0 rgba(255, 23, 40, 0.50);
@@ -67,4 +73,13 @@
 
 .bg-gradient-primary {
   background: var(--bg-gradient-primary);
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
