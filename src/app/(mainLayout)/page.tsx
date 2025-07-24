@@ -15,14 +15,14 @@ export default function Home() {
       <div className="">
         <OurMetrics />
         <div className="">
-          {/* <OurServices /> */}
+          <OurServices />
         </div>
         {/* absolute top-[600px] w-full */}
       </div>
-      {/* <HowWeWork />
+      <HowWeWork />
       <GoogleReviews />
       <ContactUs />
-      <FAQ /> */}
+      <FAQ />
     </div>
   );
 }
