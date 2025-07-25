@@ -20,6 +20,7 @@ import scheduleMagnet from "./images/scheduleMagnet.png";
 import magnetBg from "./images/magnet-bg.svg";
 import vision from "./images/vision.png";
 import aboutSEO from "./images/about-seo.png";
+import whySEO from "./images/why-seo.png";
 
 
 
@@ -78,7 +79,8 @@ export const IMAGES = {
   magnetBg,
   contactUsLines,
   vision,
-  aboutSEO
+  aboutSEO,
+  whySEO,
 };
 
 export const ICONS = {
