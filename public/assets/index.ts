@@ -18,6 +18,7 @@ import threeDVisualization from "./images/3d-visualization.gif";
 import ScheduleGradient from "./images/schedule-gradient.png";
 import scheduleMagnet from "./images/scheduleMagnet.png";
 import magnetBg from "./images/magnet-bg.svg";
+import vision from "./images/vision.png";
 
 
 
@@ -67,6 +68,7 @@ export const IMAGES = {
   scheduleMagnet,
   magnetBg,
   contactUsLines,
+  vision
 };
 
 export const ICONS = {

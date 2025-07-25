@@ -1,6 +1,7 @@
 import BlogCarousal from "@/components/BlogDetails/BlogCarousal/BlogCarousal";
 import BlogDescription from "@/components/BlogDetails/BlogDescription/BlogDescription";
 import BlogDetailsHero from "@/components/BlogDetails/BlogDetailsHero/BlogDetailsHero";
+import FAQ from "@/components/Shared/FAQ/FAQ";
 import React from "react";
 
 type PageProps = {
@@ -24,7 +25,6 @@ const Page = ({ params }: PageProps) => {
     { label: "Conclusion", href: "#conclusion" },
   ];
 
- 
   return (
     <div>
       <BlogDetailsHero />
@@ -32,10 +32,11 @@ const Page = ({ params }: PageProps) => {
         tocItems={tocItems}
         // descriptionContent={descriptionContent}
       />
-     
+
       <div className="pl-20 mt-12 py-24">
         <BlogCarousal />
       </div>
+      <FAQ/>
     </div>
   );
 };
