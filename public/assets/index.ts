@@ -21,6 +21,9 @@ import magnetBg from "./images/magnet-bg.svg";
 import vision from "./images/vision.png";
 import aboutSEO from "./images/about-seo.png";
 import whySEO from "./images/why-seo.png";
+import dummyWork1 from "./images/dummy-work1.png";
+import dummyWork2 from "./images/dummy-work2.png";
+import dummyWork3 from "./images/dummy-work3.png";
 
 
 
@@ -81,6 +84,9 @@ export const IMAGES = {
   vision,
   aboutSEO,
   whySEO,
+  dummyWork1,
+  dummyWork2,
+  dummyWork3,
 };
 
 export const ICONS = {

@@ -3,6 +3,7 @@ import OurServices from "@/components/HomePage/OurServices/OurServices";
 import AboutSEO from "@/components/Services/AboutSEO/AboutSEO";
 import Articles from "@/components/Services/AboutSEO/Articles/Articles";
 import WhySeoMatters from "@/components/Services/AboutSEO/WhySeoMatters/WhySeoMatters";
+import OurWorks from "@/components/Services/OurWorks/OurWorks";
 import ContactUs from "@/components/Shared/ContactUs/ContactUs";
 import Counter from "@/components/Shared/Counter/Counter";
 import FAQ from "@/components/Shared/FAQ/FAQ";
@@ -17,6 +18,7 @@ const page = () => {
       <WhySeoMatters/>
       <OurServices title="Our Services"  sectionDescription="We Are Specialized in the Following Services"/>
       <HowWeWork/>
+      <OurWorks/>
       <GoogleReviews />
       <ContactUs />
       <Articles/>
