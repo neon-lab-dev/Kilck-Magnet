@@ -11,7 +11,7 @@ const Hero = () => {
             Built for Ambitious Brands. Designed for Results.
           </div>
 
-          <div className="flex items-center justify-between relative">
+          <div className="flex items-center justify-between relative z-10">
             <div>
               <h1 className="text-[72px] font-black leading-20 text-white max-w-[900px]">
                 Turn Clicks into Clients. Build a Brand That Performs.

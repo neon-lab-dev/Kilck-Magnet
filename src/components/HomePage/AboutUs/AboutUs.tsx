@@ -16,7 +16,7 @@ const AboutUs = () => {
               <span className="text-primary-15">Driven by Results.</span>
             </h1>
           </div>
-          <p className="text--neutral-20 text-2xl leading-8">
+          <p className="text-neutral-20 text-2xl leading-8">
             We’re a tight-knit team of creators, strategists, and
             problem-solvers obsessed with helping brands grow. From bold ideas
             to flawless execution, we blend design, tech, and marketing to craft
@@ -25,7 +25,7 @@ const AboutUs = () => {
             We don’t do templates. We don’t do average. We build what your
             competitors wish they had.
           </p>
-          <button className="bg-gradient-primary shadow-primary-button py-6 px-8 rounded-[999px] text-white text-2xl font-bold leading-5 mt-8 flex items-center gap-[10px] w-fit">
+          <button className="bg-gradient-primary shadow-primary-button2 py-6 px-8 rounded-[999px] text-white text-2xl font-bold leading-5 mt-8 flex items-center gap-[10px] w-fit">
             Get in touch
             <Image src={ICONS.rightArrowWhite} alt="" className="size-6" />
           </button>
