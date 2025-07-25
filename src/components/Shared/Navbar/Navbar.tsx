@@ -17,6 +17,10 @@ const Navbar = () => {
       path: "/about-us",
     },
     {
+      label: "Services",
+      path: "/services",
+    },
+    {
       label: "Blogs",
       path: "/blogs",
     },

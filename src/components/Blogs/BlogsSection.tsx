@@ -34,6 +34,20 @@ const blogsData = [
       "From server optimization to caching strategies, learn how to scale  kjdbvu efficiently...",
     image: IMAGES.dummyBlogImage,
   },
+  {
+    _id : "5",
+    title: "Scaling a Next.js App for Millions of Users",
+    description:
+      "From server optimization to caching strategies, learn how to scale  kjdbvu efficiently...",
+    image: IMAGES.dummyBlogImage,
+  },
+  {
+    _id : "6",
+    title: "Scaling a Next.js App for Millions of Users",
+    description:
+      "From server optimization to caching strategies, learn how to scale  kjdbvu efficiently...",
+    image: IMAGES.dummyBlogImage,
+  },
 ];
 
 const BlogsSection = () => {
