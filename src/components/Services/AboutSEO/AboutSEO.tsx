@@ -8,7 +8,7 @@ const AboutSEO = () => {
     <div>
       <Container>
         <div className="flex justify-between items-center py-[150px] bg-white">
-          <div className="font-Satoshi flex flex-col gap-8">
+          <div className="font-Satoshi flex flex-col gap-8 ">
             <div>
               <h2 className="text-primary-20 text-2xl font-black leading-8">
                 Choose Klick Magnet Media for Unbeatable
@@ -29,7 +29,7 @@ const AboutSEO = () => {
               <Image src={ICONS.rightArrowWhite} alt="" className="size-6" />
             </button>
           </div>
-          <Image src={IMAGES.aboutSEO} alt="" className="" />
+          <Image src={IMAGES.aboutSEO} alt="" className="w-[55%]" />
         </div>
       </Container>
     </div>

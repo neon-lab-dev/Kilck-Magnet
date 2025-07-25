@@ -2,7 +2,7 @@
 import Container from "@/components/Reusable/Container/Container";
 import Image from "next/image";
 import React from "react";
-import { ICONS, IMAGES } from "../../../../../public/assets";
+import { ICONS, IMAGES } from "../../../../public/assets";
 import BlogsCards from "@/components/Blogs/BlogsCards";
 import { useRouter } from "next/navigation";
 

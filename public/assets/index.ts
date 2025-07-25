@@ -20,6 +20,7 @@ import scheduleMagnet from "./images/scheduleMagnet.png";
 import magnetBg from "./images/magnet-bg.svg";
 import vision from "./images/vision.png";
 import aboutSEO from "./images/about-seo.png";
+import logo from "./images/logo.png";
 import whySEO from "./images/why-seo.png";
 import dummyWork1 from "./images/dummy-work1.png";
 import dummyWork2 from "./images/dummy-work2.png";
@@ -59,6 +60,11 @@ import facebookPrimary from "./icons/facebook-primary.svg";
 import youtubePrimary from "./icons/youtube-primary.svg";
 import instagramPrimary from "./icons/instagram-primary.svg";
 import twitterPrimary from "./icons/twitter-primary.svg";
+import tool from "./icons/tool.svg";
+import setting from "./icons/settings.svg";
+import target from "./icons/target.svg";
+import tick from "./icons/tick.svg";
+import cross from "./icons/cross.svg";
 
 
 export const IMAGES = {
@@ -83,6 +89,7 @@ export const IMAGES = {
   contactUsLines,
   vision,
   aboutSEO,
+  logo,
   whySEO,
   dummyWork1,
   dummyWork2,
@@ -121,5 +128,12 @@ export const ICONS = {
   facebookPrimary,
   youtubePrimary,
   instagramPrimary,
-  twitterPrimary
+  twitterPrimary,
+  tool,
+  setting,
+  target,
+  tick,
+  cross
+
+
 };
