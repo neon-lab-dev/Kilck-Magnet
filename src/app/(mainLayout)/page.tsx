@@ -1,5 +1,6 @@
 import AboutUs from "@/components/HomePage/AboutUs/AboutUs";
 import GoogleReviews from "@/components/HomePage/GoogleReviews/GoogleReviews";
+import Hero from "@/components/HomePage/Hero/Hero";
 import OurMetrics from "@/components/HomePage/OurMetrics/OurMetrics";
 import OurServices from "@/components/HomePage/OurServices/OurServices";
 import ProudPartners from "@/components/HomePage/ProudPartners/ProudPartners";
@@ -10,6 +11,7 @@ import HowWeWork from "@/components/Shared/HowWeWork/HowWeWork";
 export default function Home() {
   return (
     <div>
+      <Hero/>
       <ProudPartners />
       <AboutUs />
       <div className="">

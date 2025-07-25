@@ -3,17 +3,10 @@
 import Container from "@/components/Reusable/Container/Container";
 import Image from "next/image";
 import { ICONS, IMAGES } from "../../../../public/assets";
-import TextInput from "@/components/Reusable/TextInput/TextInput";
-import { useForm } from "react-hook-form";
-import Textarea from "@/components/Reusable/TextArea/TextArea";
+import ContactUsForm from "./ContactUsForm";
 
 const ContactUs = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm<any>();
+ 
   return (
     <div className="bg-gradient-primary py-[150px] font-Satoshi">
       <Container>
@@ -75,38 +68,8 @@ const ContactUs = () => {
             </div>
           </div>
 
-          <div className="w-[40%] z-10">
-            <form className="bg-white p-6 rounded-[20px] flex flex-col gap-8 z-10">
-              <TextInput
-                label="Your Name"
-                placeholder="Enter your full name"
-                {...register("title", { required: "Name is required" })}
-                error={errors.title}
-              />
-              <TextInput
-                label="Email Address"
-                placeholder="Enter your email"
-                {...register("title")}
-                error={errors.title}
-                isRequired={false}
-              />
-              <TextInput
-                label="Mobile No."
-                placeholder="EEnter your email"
-                {...register("title", { required: "Phone number is required" })}
-                error={errors.title}
-              />
-              <Textarea
-                label="Put your questions here"
-                {...register("question")}
-                placeholder="Write us your question here..."
-              />
-              <div className="flex items-start">
-                <button className="bg-gradient-primary px-6 py-3 rounded-lg text-white font-bold leading-6 w-fit cursor-pointer">
-                  Send message
-                </button>
-              </div>
-            </form>
+          <div className="w-[40%] z-10 bg-white p-6 rounded-[20px]">
+          <ContactUsForm/>
           </div>
         </div>
       </Container>

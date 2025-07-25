@@ -43,10 +43,17 @@ import location from "./icons/location.svg";
 import phoneGray from "./icons/phone-gray.svg";
 import emailGray from "./icons/email-gray.svg";
 import locationGray from "./icons/location-gray.svg";
+import phonePrimary from "./icons/phone-primary.svg";
+import emailPrimary from "./icons/email-primary.svg";
+import locationPrimary from "./icons/location-primary.svg";
 import facebook from "./icons/facebook.svg";
 import instagram from "./icons/instagram.svg";
 import linkedin from "./icons/linkedin.svg";
 import youtube from "./icons/youtube.svg";
+import facebookPrimary from "./icons/facebook-primary.svg";
+import youtubePrimary from "./icons/youtube-primary.svg";
+import instagramPrimary from "./icons/instagram-primary.svg";
+import twitterPrimary from "./icons/twitter-primary.svg";
 
 export const IMAGES = {
   heroImage,
@@ -93,8 +100,15 @@ export const ICONS = {
   phoneGray,
   emailGray,
   locationGray,
+  phonePrimary,
+  emailPrimary,
+  locationPrimary,
   facebook,
   instagram,
   linkedin,
   youtube,
+  facebookPrimary,
+  youtubePrimary,
+  instagramPrimary,
+  twitterPrimary
 };
