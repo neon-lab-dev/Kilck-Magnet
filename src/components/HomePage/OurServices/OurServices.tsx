@@ -4,7 +4,10 @@ import Image from "next/image";
 import Container from "@/components/Reusable/Container/Container";
 import ServiceCard from "./ServiceCard";
 
-const OurServices = () => {
+const OurServices = ({
+  title = "How is Works",
+ sectionDescription= "From strategy to execution, we offer end-to-end digital services that help your brand grow faster and smarter.",
+}) => {
   const services = [
     {
       icon: IMAGES.websiteDesign,
@@ -63,11 +66,10 @@ const OurServices = () => {
           <div className="flex flex-col items-center justify-center z-50 absolute top-40 right-0 left-0">
             <div className="text-center mx-auto">
               <h1 className="font-black text-[64px] leading-[72px] text-center text-white">
-                What We Do Best
+                {title}
               </h1>
               <p className="text-neutral-50 text-[28px] leading-8 max-w-[698px] mx-auto mt-4 font-normal">
-                From strategy to execution, we offer end-to-end digital services
-                that help your brand grow faster and smarter.
+               {sectionDescription}
               </p>
             </div>
           </div>

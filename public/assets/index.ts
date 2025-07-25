@@ -19,6 +19,7 @@ import ScheduleGradient from "./images/schedule-gradient.png";
 import scheduleMagnet from "./images/scheduleMagnet.png";
 import magnetBg from "./images/magnet-bg.svg";
 import vision from "./images/vision.png";
+import aboutSEO from "./images/about-seo.png";
 
 
 
@@ -55,6 +56,7 @@ import youtubePrimary from "./icons/youtube-primary.svg";
 import instagramPrimary from "./icons/instagram-primary.svg";
 import twitterPrimary from "./icons/twitter-primary.svg";
 
+
 export const IMAGES = {
   heroImage,
   heroGradient,
@@ -75,7 +77,8 @@ export const IMAGES = {
   scheduleMagnet,
   magnetBg,
   contactUsLines,
-  vision
+  vision,
+  aboutSEO
 };
 
 export const ICONS = {
