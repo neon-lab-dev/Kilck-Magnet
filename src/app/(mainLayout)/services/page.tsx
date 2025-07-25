@@ -1,7 +1,8 @@
 import GoogleReviews from "@/components/HomePage/GoogleReviews/GoogleReviews";
 import OurServices from "@/components/HomePage/OurServices/OurServices";
 import AboutSEO from "@/components/Services/AboutSEO/AboutSEO";
-import Articles from "@/components/Services/AboutSEO/Articles/Articles";
+import Articles from "@/components/Services/Articles/Articles";
+import WhatWeFocusOn from "@/components/Services/WhatWeFocusOn/WhatWeFocusOn";
 import ContactUs from "@/components/Shared/ContactUs/ContactUs";
 import Counter from "@/components/Shared/Counter/Counter";
 import FAQ from "@/components/Shared/FAQ/FAQ";
@@ -15,6 +16,7 @@ const page = () => {
       <Counter />
       <OurServices title="Our Services"  sectionDescription="We Are Specialized in the Following Services"/>
       <HowWeWork/>
+      <WhatWeFocusOn/>
       <GoogleReviews />
       <ContactUs />
       <Articles/>

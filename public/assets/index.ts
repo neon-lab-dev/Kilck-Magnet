@@ -55,6 +55,9 @@ import facebookPrimary from "./icons/facebook-primary.svg";
 import youtubePrimary from "./icons/youtube-primary.svg";
 import instagramPrimary from "./icons/instagram-primary.svg";
 import twitterPrimary from "./icons/twitter-primary.svg";
+import tool from "./icons/tool.svg";
+import setting from "./icons/settings.svg";
+import target from "./icons/target.svg";
 
 
 export const IMAGES = {
@@ -113,5 +116,10 @@ export const ICONS = {
   facebookPrimary,
   youtubePrimary,
   instagramPrimary,
-  twitterPrimary
+  twitterPrimary,
+  tool,
+  setting,
+  target
+
+
 };
