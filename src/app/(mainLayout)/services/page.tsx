@@ -8,6 +8,7 @@ import Counter from "@/components/Shared/Counter/Counter";
 import FAQ from "@/components/Shared/FAQ/FAQ";
 import HowWeWork from "@/components/Shared/HowWeWork/HowWeWork";
 import React from "react";
+import HowAreWeDifferent from './../../../components/Services/HowAreWeDifferent/HowAreWeDifferent';
 
 const page = () => {
   return (
@@ -17,6 +18,7 @@ const page = () => {
       <OurServices title="Our Services"  sectionDescription="We Are Specialized in the Following Services"/>
       <HowWeWork/>
       <WhatWeFocusOn/>
+      <HowAreWeDifferent/>
       <GoogleReviews />
       <ContactUs />
       <Articles/>
