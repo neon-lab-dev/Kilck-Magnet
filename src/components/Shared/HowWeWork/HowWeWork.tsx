@@ -36,7 +36,7 @@ const HowWeWork = () => {
     },
   ];
   return (
-    <div className="py-[150px] relative font-Satoshi">
+    <div className="py-[150px] relative font-Satoshi mt-[1100px]">
       <Image
         src={IMAGES.hoeItWorksLines}
         alt=""
