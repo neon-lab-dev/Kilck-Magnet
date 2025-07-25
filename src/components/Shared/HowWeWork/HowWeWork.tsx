@@ -1,8 +1,11 @@
+"use client";
 import Container from "@/components/Reusable/Container/Container";
 import Image from "next/image";
 import { ICONS, IMAGES } from "../../../../public/assets";
+import { usePathname } from "next/navigation";
 
 const HowWeWork = () => {
+  const pathname = usePathname();
   const workProcess = [
     {
       icon: ICONS.planning,
@@ -36,7 +39,11 @@ const HowWeWork = () => {
     },
   ];
   return (
-    <div className="py-[150px] relative font-Satoshi mt-[1100px]">
+    <div
+      className={`py-[150px] relative font-Satoshi ${
+        pathname === "/" ? "mt-[1100px]" : "mt-0"
+      }`}
+    >
       <Image
         src={IMAGES.hoeItWorksLines}
         alt=""
