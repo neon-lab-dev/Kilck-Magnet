@@ -7,7 +7,7 @@ const ScheduleCall = () => {
   return (
     <Container>
       <div
-      className="relative space-y-8 rounded-[40px] p-16 font-Satoshi max-w-[1218px] mx-auto shadow-schedule-call"
+      className="relative space-y-8 rounded-[40px] p-16 font-Satoshi overflow-hidden max-w-[1218px] mx-auto shadow-schedule-call"
       style={{
         background: "linear-gradient(180deg, #FF6467 0%, #FB2C36 100%)"
       }}

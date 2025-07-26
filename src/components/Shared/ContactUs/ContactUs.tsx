@@ -8,13 +8,13 @@ import ContactUsForm from "./ContactUsForm";
 const ContactUs = () => {
  
   return (
-    <div className="bg-gradient-primary py-[150px] font-Satoshi">
+    <div className="bg-gradient-primary py-[150px] overflow-hidden font-Satoshi">
       <Container>
         <div className="flex items-center gap-10 relative">
           <Image
             src={IMAGES.contactUsLines}
             alt=""
-            className="absolute -top-20 -right-32 z-0"
+            className="absolute -top-20 -right-32 overflow-hidden xl:-right-56 z-0 "
           />
           <div className="w-[60%]">
             <h2 className="text-primary-20 text-2xl font-black leading-8">
