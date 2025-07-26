@@ -112,7 +112,7 @@ const Footer = () => {
       <Container>
         <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-20 ">
           {/* Left side logo and description */}
-          <div className="flex flex-col gap-4 text-white w-[20%]">
+          <div className="flex flex-col gap-4 text-white w-[30%]">
             <Link
               href={"/"}
               className="text-neutral-10 font-black font-Satoshi text-2xl"
@@ -125,7 +125,7 @@ const Footer = () => {
             </p>
           </div>
           {/* Right side links */}
-          <div className="flex flex-col lg:flex-row gap-10 lg:gap-20">
+          <div className="flex flex-col lg:flex-row w-[70%] justify-between">
             {footerLinks?.map((item) => (
               <div key={item?.heading} className="flex flex-col gap-1">
                 <span className="text-neutral-65 font-medium leading-5">
