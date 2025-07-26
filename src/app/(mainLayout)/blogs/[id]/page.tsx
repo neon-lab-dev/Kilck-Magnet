@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import BlogCarousal from "@/components/BlogDetails/BlogCarousal/BlogCarousal";
 import BlogDescription from "@/components/BlogDetails/BlogDescription/BlogDescription";
 import BlogDetailsHero from "@/components/BlogDetails/BlogDetailsHero/BlogDetailsHero";
 import FAQ from "@/components/Shared/FAQ/FAQ";
 import React from "react";
+
 
 type PageProps = {
   params: { id: string };
@@ -10,6 +12,7 @@ type PageProps = {
 
 const Page = ({ params }: PageProps) => {
   console.log(params.id)
+
   const tocItems = [
     { label: "Drone Inspections", href: "#drone-inspections" },
     { label: "Drone-in-a-Box (DiaB) Technology", href: "#dia-b-technology" },
