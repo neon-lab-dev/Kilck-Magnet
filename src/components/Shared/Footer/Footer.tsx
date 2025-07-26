@@ -9,57 +9,30 @@ import ScheduleCall from "../ScheduleCall/ScheduleCall";
 const Footer = () => {
   const footerLinks = [
     {
-      heading: "Company",
+      heading: "Resources",
       links: [
-        { name: "Privacy Policy", href: "/privacy-policy" },
-        { name: "Terms of Use", href: "/terms-and-conditions" },
-        { name: "Refund Policy", href: "/refund-policy" },
-        { name: "About us", href: "/about-us" },
+        { name: "About", href: "/about-us" },
+        { name: "Blogs", href: "/blogs" },
         { name: "Contact us", href: "/contact-us" },
+        { name: "Portfolio", href: "/" },
+        { name: "FAQs", href: "/" },
+      ],
+    },
+  ];
+ const footerServices  = [
+    {
+     heading: "Our Services",
+      links: [
+        { name: "Web Development", href: "/" },
+        { name: "Graphic Designing", href: "/" },
+        { name: "Social Media Marketing", href: "/" },
+        { name: "SEO", href: "/services" },
+        { name: "3D Walkthrough", href: "/" },
       ],
     },
   ];
 
-  const importantLinks = [
-    {
-      label: "Jobs",
-      action: () => {
-        window.location.href = "/jobs";
-      },
-    },
-    {
-      label: "Internships",
-      action: () => {
-        window.location.href = "/internships";
-      },
-    },
-    {
-      label: "Skill Programmes",
-      action: () => {
-        window.location.href = "/skill-programmes";
-      },
-    },
-    {
-      label: "Courses",
-      action: () => {
-        window.location.href = "/courses";
-      },
-    },
-    {
-      label: "Trending Today",
-      action: () => {
-        const section = document.getElementById("trending-today");
-        if (section) section.scrollIntoView({ behavior: "smooth" });
-      },
-    },
-    {
-      label: "Events",
-      action: () => {
-        const section = document.getElementById("events");
-        if (section) section.scrollIntoView({ behavior: "smooth" });
-      },
-    },
-  ];
+ 
 
   const contactInfo = [
     {
@@ -144,22 +117,22 @@ const Footer = () => {
               </div>
             ))}
 
-            <div className="flex flex-col gap-1">
-              <span className="text-neutral-65 font-medium leading-5">
-                Important
-              </span>
-              <div className="text-neutral-65 leading-5 flex flex-col gap-4 mt-3">
-                {importantLinks.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex gap-2 cursor-pointer"
-                    onClick={item.action}
-                  >
-                    <span className="hover:underline">{item.label}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+            {footerServices?.map((item) => (
+              <div key={item?.heading} className="flex flex-col gap-1">
+                <span className="text-neutral-65 font-medium leading-5">
+                  {item?.heading}
+                </span>
+                <ul className="text-neutral-65 leading-5 flex flex-col gap-4 mt-3">
+                  {/* Using map to render other links */}
+                  {item?.links.map((link, index) => (
+                    <li key={index}>
+                      <Link href={link.href} className="hover:underline">
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                </div>))}
 
             <div className="flex flex-col gap-1 max-w-[400px]">
               <span className="text-neutral-65 font-medium leading-5">
