@@ -98,7 +98,7 @@ const ContactUsHero = () => {
       <Image
         src={IMAGES.heroGradient}
         alt=""
-        className="bottom-0 absolute top-20 w-full"
+        className="bottom-0 absolute left-0 right-0 w-full"
       />
     </div>
   );
