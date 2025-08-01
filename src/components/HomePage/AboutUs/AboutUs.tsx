@@ -1,12 +1,22 @@
+"use client";
+
 import Container from "@/components/Reusable/Container/Container";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { ICONS, IMAGES } from "../../../../public/assets";
 
 const AboutUs = () => {
   return (
     <Container>
-      <div className="flex justify-between items-center py-[150px] bg-white">
-        <div className="font-Satoshi flex flex-col gap-8">
+      <div className="flex justify-between items-center py-[150px] bg-white overflow-hidden">
+        {/* Left Side Content Animation (Slide from Left) */}
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="font-Satoshi flex flex-col gap-8 w-1/2"
+        >
           <div>
             <h2 className="text-primary-20 text-2xl font-black leading-8">
               ABOUT US
@@ -29,8 +39,17 @@ const AboutUs = () => {
             Get in touch
             <Image src={ICONS.rightArrowWhite} alt="" className="size-6" />
           </button>
-        </div>
-        <Image src={IMAGES.aboutUs} alt="" className="" />
+        </motion.div>
+
+        {/* Right Side Image Animation (Slide from Right) */}
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          <Image src={IMAGES.aboutUs} alt="About Us" className="" />
+        </motion.div>
       </div>
     </Container>
   );
