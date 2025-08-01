@@ -1,10 +1,10 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
+
 import Container from "@/components/Reusable/Container/Container";
 import Image from "next/image";
 import { ICONS, IMAGES } from "../../../../public/assets";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 const HowWeWork = () => {
   const pathname = usePathname();
@@ -41,7 +41,8 @@ const HowWeWork = () => {
     },
   ];
 
-  const leftContainerVariants :any= {
+  // Animation variants for the left column container (for staggering children)
+  const leftContainerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -51,7 +52,8 @@ const HowWeWork = () => {
     },
   };
 
-  const leftItemVariants :any = {
+  // Animation for the text inside the left column (slides from left)
+  const leftItemVariants: Variants = {
     hidden: { x: -100, opacity: 0 },
     visible: {
       x: 0,
@@ -63,7 +65,8 @@ const HowWeWork = () => {
     },
   };
 
-  const rightItemVariants :any= {
+  // Animation for the items in the right column (slides from bottom)
+  const rightItemVariants: Variants = {
     hidden: { y: 80, opacity: 0 },
     visible: {
       y: 0,
@@ -76,8 +79,10 @@ const HowWeWork = () => {
   };
 
   return (
+    // We REMOVE `overflow-hidden` from the main component wrapper.
+    // This is the critical fix that allows `position: sticky` to work.
     <div
-      className={`py-[150px] relative font-Satoshi overflow-hidden ${
+      className={`py-[150px] relative font-Satoshi ${
         pathname === "/" ? "mt-[1100px]" : "mt-0"
       }`}
     >
@@ -89,7 +94,10 @@ const HowWeWork = () => {
       <Container>
         <div className="flex gap-20 items-start">
           {/* Left Side (Sticky Content) */}
-          <div className="sticky top-[120px] w-[40%]">
+          
+          {/* We ADD `overflow-hidden` here. This hides the animation content before it slides in,
+              without breaking the sticky behavior of the parent page. */}
+          <div className="sticky top-[120px] w-[40%] h-fit overflow-hidden">
             <motion.div
               initial="hidden"
               whileInView="visible"
