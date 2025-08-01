@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import Container from "@/components/Reusable/Container/Container";
 import Image from "next/image";
 import { ICONS, IMAGES } from "../../../../public/assets";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 const HowWeWork = () => {
   const pathname = usePathname();
@@ -38,35 +40,92 @@ const HowWeWork = () => {
         "It is an important step which makes sure that your site works with efficiency all the time.",
     },
   ];
+
+  const leftContainerVariants :any= {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const leftItemVariants :any = {
+    hidden: { x: -100, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const rightItemVariants :any= {
+    hidden: { y: 80, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <div
-      className={`py-[150px] relative font-Satoshi ${
+      className={`py-[150px] relative font-Satoshi overflow-hidden ${
         pathname === "/" ? "mt-[1100px]" : "mt-0"
       }`}
     >
       <Image
         src={IMAGES.hoeItWorksLines}
         alt=""
-        className="absolute -top-32 left-0 -z-10 "
+        className="absolute -top-32 left-0 -z-10"
       />
       <Container>
         <div className="flex gap-20 items-start">
+          {/* Left Side (Sticky Content) */}
           <div className="sticky top-[120px] w-[40%]">
-            <h1 className="text-neutral-10 text-[48px] font-black leading-[56px] mt-2">
-              How We <span className="text-primary-15">Work.</span>
-            </h1>
-            <p className="text-neutral-20 text-2xl leading-8 max-w-[670px] mt-4">
-              Give your brand a boost with our digital marketing agency We get
-              you a customer not just a traffic.
-            </p>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={leftContainerVariants}
+            >
+              <motion.h1
+                className="text-neutral-10 text-[48px] font-black leading-[56px] mt-2"
+                variants={leftItemVariants}
+              >
+                How We <span className="text-primary-15">Work.</span>
+              </motion.h1>
+              <motion.p
+                className="text-neutral-20 text-2xl leading-8 max-w-[670px] mt-4"
+                variants={leftItemVariants}
+              >
+                Give your brand a boost with our digital marketing agency We get
+                you a customer not just a traffic.
+              </motion.p>
+            </motion.div>
           </div>
 
+          {/* Right Side (Scrolling Content) */}
           <div className="w-[60%]">
             <div className="flex flex-col gap-24 relative">
               <div className="border-l-2 border-dashed border-neutral-55 h-[730px] absolute top-16 left-10 z-0"></div>
 
               {workProcess?.map((item, index) => (
-                <div key={index} className="flex items-center gap-6 z-10">
+                <motion.div
+                  key={index}
+                  className="flex items-center gap-6 z-10"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.5 }}
+                  variants={rightItemVariants}
+                >
                   <Image src={item?.icon} alt="" className="rounded-full" />
                   <div>
                     <h1 className="text-neutral-10 text-[28px] font-bold leading-10">
@@ -76,10 +135,16 @@ const HowWeWork = () => {
                       {item?.description}
                     </p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
-            <div className="bg-[#fff2f2] rounded-[999px] p-3 flex items-center justify-center h-fit  mt-24">
+            <motion.div
+              className="bg-[#fff2f2] rounded-[999px] p-3 flex items-center justify-center h-fit mt-24"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.8 }}
+              variants={rightItemVariants}
+            >
               <div className="bg-[#ffe6e6] rounded-[999px] p-3 flex items-center justify-center h-fit w-full">
                 <button className="bg-gradient-primary shadow-primary-button2 py-6 px-8 rounded-[999px] text-white text-2xl font-bold leading-5 flex items-center justify-center gap-[10px] w-full mx-auto">
                   Let’s get started
@@ -90,7 +155,7 @@ const HowWeWork = () => {
                   />
                 </button>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </Container>

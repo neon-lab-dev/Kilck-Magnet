@@ -1,6 +1,5 @@
-// Your component file path
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-
 import Container from "@/components/Reusable/Container/Container";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -35,7 +34,7 @@ const OurMetrics = () => {
     },
   ];
 
-  const containerVariants = {
+  const containerVariants: any = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -45,14 +44,13 @@ const OurMetrics = () => {
     },
   };
 
-  // The 'y' value has been increased for a more prominent slide
-  const itemVariants = {
+  const itemVariants: any = {
     hidden: { y: 80, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.6, // Slightly increased duration for a smoother feel
+        duration: 0.6,
         ease: "easeOut",
       },
     },

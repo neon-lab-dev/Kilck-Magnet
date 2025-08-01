@@ -4,15 +4,21 @@
 import { useEffect, useRef } from "react";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 
-const Counter = ({ value, className }) => {
-  const ref = useRef(null);
+const Counter = ({
+  value,
+  className,
+}: {
+  value: string;
+  className: string;
+}) => {
+  const ref = useRef<HTMLSpanElement>(null);
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, { duration: 3000 });
   const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
     if (isInView) {
-      motionValue.set(value);
+      motionValue.set(Number(value));
     }
   }, [motionValue, isInView, value]);
 
@@ -20,7 +26,7 @@ const Counter = ({ value, className }) => {
     springValue.on("change", (latest) => {
       if (ref.current) {
         ref.current.textContent = Intl.NumberFormat("en-US").format(
-          latest.toFixed(0)
+          Number(latest.toFixed(0))
         );
       }
     });
