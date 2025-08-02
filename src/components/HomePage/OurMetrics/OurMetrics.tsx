@@ -113,7 +113,7 @@ const OurMetrics = () => {
                 <div>
                   <h1 className="text-white text-[48px] font-black leading-[56px] mt-2 flex items-center">
                     <Counter
-                      value={metric.value}
+                      value={String(metric.value)}
                       className="text-white text-[48px] font-black leading-[56px]"
                     />
                     {metric.suffix}
