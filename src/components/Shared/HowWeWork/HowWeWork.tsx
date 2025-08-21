@@ -77,7 +77,7 @@ const HowWeWork = () => {
 
   return (
     <div
-      className={`py-[150px] relative font-Satoshi ${
+      className={`container-padding relative font-Satoshi ${
         pathname === "/" ? "mt-[1100px]" : "mt-0"
       }`}
     >
@@ -87,9 +87,9 @@ const HowWeWork = () => {
         className="absolute -top-32 left-0 -z-10"
       />
       <Container>
-        <div className="flex gap-20 items-start">
+        <div className="flex flex-col lg:flex-row gap-20 items-start">
           {/* Left Side (Sticky Content) */}
-          <div className="sticky top-[120px] w-[40%] h-fit overflow-hidden">
+          <div className="lg:sticky top-12 lg:top-[120px] w-full lg:w-[40%] h-fit overflow-hidden">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -97,13 +97,13 @@ const HowWeWork = () => {
               variants={leftContainerVariants}
             >
               <motion.h1
-                className="text-neutral-10 text-[48px] font-black leading-[56px] mt-2"
+                className="text-neutral-10 heading-xl mt-2"
                 variants={leftItemVariants}
               >
                 How We <span className="text-primary-15">Work.</span>
               </motion.h1>
               <motion.p
-                className="text-neutral-20 text-2xl leading-8 max-w-[670px] mt-4"
+                className="text-neutral-20 description max-w-[670px] mt-4"
                 variants={leftItemVariants}
               >
                 Give your brand a boost with our digital marketing agency We get
@@ -113,9 +113,9 @@ const HowWeWork = () => {
           </div>
 
           {/* Right Side (Scrolling Content) */}
-          <div className="w-[60%]">
-            <div className="flex flex-col gap-24 relative">
-              <div className="border-l-2 border-dashed border-neutral-55 h-[730px] absolute top-16 left-10 z-0"></div>
+          <div className="w-full lg:w-[60%]">
+            <div className="flex flex-col gap-10 lg:gap-24 relative">
+              <div className="border-l-2 border-dashed border-neutral-55 h-[730px] md:h-[560px] lg:h-[800px] absolute top-16 left-10 z-0"></div>
 
               {workProcess?.map((item, index) => (
                 <motion.div
@@ -128,10 +128,10 @@ const HowWeWork = () => {
                 >
                   <Image src={item?.icon} alt="" className="rounded-full" />
                   <div>
-                    <h1 className="text-neutral-10 text-[28px] font-bold leading-10">
+                    <h1 className="text-neutral-10 text-xl lg:text-[28px] font-bold leading-10">
                       {item?.title}
                     </h1>
-                    <p className="text-neutral-20 text-2xl leading-6 mt-2 max-w-[600px]">
+                    <p className="text-neutral-20 description mt-2 max-w-[600px]">
                       {item?.description}
                     </p>
                   </div>
@@ -139,14 +139,14 @@ const HowWeWork = () => {
               ))}
             </div>
             <motion.div
-              className="bg-[#fff2f2] rounded-[999px] p-3 flex items-center justify-center h-fit mt-24"
+              className="bg-[#fff2f2] rounded-[999px] p-1 lg:p-3 flex items-center justify-center h-fit w-fit lg:w-full mt-10 2xl:mt-24"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.8 }}
               variants={rightItemVariants}
             >
-              <div className="bg-[#ffe6e6] rounded-[999px] p-3 flex items-center justify-center h-fit w-full">
-                <button className="bg-gradient-primary shadow-primary-button2 py-6 px-8 rounded-[999px] text-white text-2xl font-bold leading-5 flex items-center justify-center gap-[10px] w-full mx-auto">
+              <div className="bg-[#ffe6e6] rounded-[999px] p-1 lg:p-3 flex items-center justify-center h-fit w-full">
+                <button className="bg-gradient-primary shadow-primary-button2 py-3 lg:py-4 px-4 2xl:px-8 rounded-[999px] text-white font-bold leading-5 flex items-center justify-center gap-[10px] w-full mx-auto text-sm lg:text-xl 2xl:text-2xl">
                   Let’s get started
                   <Image
                     src={ICONS.rightArrowWhite}

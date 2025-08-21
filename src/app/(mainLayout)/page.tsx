@@ -21,8 +21,8 @@ export default function Home() {
           <OurServices />
         </div>
       </div>
-      {/* <HowWeWork />
-      <GoogleReviews />
+      <HowWeWork />
+      {/* <GoogleReviews />
       <ContactUs />
       <Articles/>
       <FAQ /> */}
