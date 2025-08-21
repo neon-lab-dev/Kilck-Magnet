@@ -1,6 +1,7 @@
 import Container from "@/components/Reusable/Container/Container";
 import Image from "next/image";
-import { ICONS, IMAGES } from "../../../../../public/assets";
+import { IMAGES } from "../../../../../public/assets";
+import Button from "@/components/Reusable/Button/Button";
 
 const WhySeoMatters = () => {
   const details = [
@@ -37,34 +38,31 @@ const WhySeoMatters = () => {
   ];
   return (
     <Container>
-      <div className="font-Satoshi py-24 flex gap-24">
-        <Image src={IMAGES.whySEO} alt="" className="w-[40%] rounded-4xl" />
-        <div className="w-[60%] flex flex-col gap-24">
-          <h2 className="text-neutral-10  text-5xl font-black leading-14">
+      <div className="font-Satoshi py-24 flex flex-col lg:flex-row gap-14 lg:gap-24">
+        <Image src={IMAGES.whySEO} alt="" className="w-full lg:w-[40%] rounded-xl lg:rounded-4xl" />
+        <div className="w-full lg:w-[60%] flex flex-col gap-7 lg:gap-24">
+          <h2 className="text-neutral-10 heading-2xl font-black leading-14">
             Why <span className="text-primary-10"> SEO Matters?</span>
           </h2>
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {details?.map((item, index) => (
               <div key={index} className="flex items-center gap-4">
-                <h1 className="text-primary-30 text-[80px] font-bold leading-normal">
+                <h1 className="text-primary-30 text-6xl lg:text-[80px] font-bold leading-normal">
                   {index + 1}
                 </h1>
                 <div>
-                  <h1 className="text-neutral-10 text-[28px] font-bold leading-8">
+                  <h1 className="text-neutral-10 text-xl lg:text-[28px] font-bold leading-8">
                     {item?.title}
                   </h1>
-                  <p className="text-neutral-20 text-lg leading-6 mt-2">
+                  <p className="text-neutral-20 text-sm lg:text-lg leading-6 mt-0 lg:mt-2">
                     {item?.description}
                   </p>
                 </div>
               </div>
             ))}
           </div>
-          <button className="bg-gradient-primary shadow-primary-button2 py-6 px-8 rounded-[999px] text-white text-2xl font-bold leading-5 flex items-center gap-[10px] w-fit">
-            Get in touch
-            <Image src={ICONS.rightArrowWhite} alt="" className="size-6" />
-          </button>
+         <Button label="Get in Touch" variant="primary" rounded="full" />
         </div>
       </div>
     </Container>

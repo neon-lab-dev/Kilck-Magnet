@@ -55,7 +55,7 @@ const ContactUsHero = () => {
   ];
   return (
     <div className=" relative pb-[110px] bg-neutral-35 font-Satoshi overflow-hidden">
-      <div className="pt-[100px]">
+      <div className="pt-10 lg:pt-[100px]">
         <Container>
           {/* 3. The main animation orchestrator starts here */}
           <motion.div
@@ -65,7 +65,7 @@ const ContactUsHero = () => {
             viewport={{ once: true, amount: 0.2 }}
           >
             <motion.h1
-              className="text-[64px] font-black leading-[64px] text-white text-center"
+              className="text-2xl font-black leading-[64px] text-white text-center"
               variants={itemVariants}
             >
               Contact Us
@@ -73,12 +73,12 @@ const ContactUsHero = () => {
 
             {/* The white card now orchestrates its own children's animations */}
             <motion.div
-              className=" bg-white rounded-[20px] z-10 relative flex mt-[64px]"
+              className=" bg-white rounded-[20px] z-10 relative flex flex-col lg:flex-row mt-5 2xl:mt-[64px]"
               variants={containerVariants} // Re-using container for the two columns
             >
               {/* Left Column (Form) */}
               <motion.div
-                className="w-[50%] p-9 border-r border-neutral-55"
+                className="w-full lg:w-[50%] p-5 lg:p-9 border-r border-neutral-55"
                 variants={itemVariants}
               >
                 <ContactUsForm />
@@ -86,18 +86,18 @@ const ContactUsHero = () => {
 
               {/* Right Column (Contact Details) */}
               <motion.div
-                className="w-[50%] px-9 py-7 flex flex-col justify-between text-neutral-70 text-xl leading-7 font-medium"
+                className="w-full lg:w-[50%] px-9 py-7 flex flex-col gap-5 lg:gap-0 justify-between text-neutral-70 text-xl leading-7 font-medium"
                 variants={listVariants} // This will stagger the list items inside
               >
                 {/* Each contact item is now a motion.div */}
                 <motion.div
-                  className="flex items-center gap-4 border-b border-neutral-55 pb-7"
+                  className="flex items-start lg:items-center text-sm lg:text-base gap-4 border-b border-neutral-55 pb-3 lg:pb-7"
                   variants={itemVariants}
                 >
                   <Image
                     src={ICONS.locationPrimary}
                     alt=""
-                    className="size-6"
+                    className="size-4 lg:size-6"
                   />
                   <p className="">
                     828,Second Floor , KLICK MAGENT DIGITAL SOLUTIONS, Kailash
@@ -106,13 +106,13 @@ const ContactUsHero = () => {
                   </p>
                 </motion.div>
                 <motion.div
-                  className="flex items-center gap-4 border-b border-neutral-55 pb-7"
+                  className="flex items-start lg:items-center text-sm lg:text-base gap-4 border-b border-neutral-55 pb-7"
                   variants={itemVariants}
                 >
                   <Image
                     src={ICONS.locationPrimary}
                     alt=""
-                    className="size-6"
+                    className="size-4 lg:size-6"
                   />
                   <p className="">
                     Ichalkaranji Office - ‘Veduta Resisdency’ Flat No. A-101, KSP
@@ -121,10 +121,10 @@ const ContactUsHero = () => {
                   </p>
                 </motion.div>
                 <motion.div
-                  className="flex items-center gap-4 border-b border-neutral-55 pb-7"
+                  className="flex items-start lg:items-center text-sm lg:text-base gap-4 border-b border-neutral-55 pb-7"
                   variants={itemVariants}
                 >
-                  <Image src={ICONS.emailPrimary} alt="" className="size-6" />
+                  <Image src={ICONS.emailPrimary} alt="" className="size-4 lg:size-6" />
                   <a
                     href="mailto:info@klickmagnet.in"
                     target="_blank"
@@ -134,10 +134,10 @@ const ContactUsHero = () => {
                   </a>
                 </motion.div>
                 <motion.div
-                  className="flex items-center gap-4 border-b border-neutral-55 pb-7"
+                  className="flex items-start lg:items-center text-xs lg:text-base gap-4 border-b border-neutral-55 pb-7"
                   variants={itemVariants}
                 >
-                  <Image src={ICONS.emailPrimary} alt="" className="size-6" />
+                  <Image src={ICONS.phonePrimary} alt="" className="size-4 lg:size-6" />
                   <div className="flex items-center gap-1">
                     <a
                       href="tel:+91-93039-20792"
@@ -156,10 +156,10 @@ const ContactUsHero = () => {
                   </div>
                 </motion.div>
                 <motion.div
-                  className="flex items-center justify-between pb-7"
+                  className="flex flex-col lg:flex-row items-center justify-between gap-5 lg:gap-0 pb-0 lg:pb-7"
                   variants={itemVariants}
                 >
-                  <p className="">Get connected on our Social networks</p>
+                  <p className="text-sm lg:text-base">Get connected on our Social networks</p>
                   <div className="flex items-center gap-2">
                     {socialLinks?.map((item) => (
                       <a key={item?.path} href={item?.path} target="_blank">

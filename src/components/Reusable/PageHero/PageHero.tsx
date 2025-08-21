@@ -1,11 +1,17 @@
 "use client";
-import Container from '@/components/Reusable/Container/Container'
-import Image from 'next/image'
-import React from 'react'
-import { IMAGES } from '../../../../public/assets'
-import {motion } from 'framer-motion'
+import Container from "@/components/Reusable/Container/Container";
+import Image from "next/image";
+import React from "react";
+import { IMAGES } from "../../../../public/assets";
+import { motion } from "framer-motion";
 
-const AboutUsHero = () => {
+const PageHero = ({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -27,7 +33,7 @@ const AboutUsHero = () => {
     },
   };
   return (
-     <div className="relative h-[300px] 2xl:h-[470px] overflow-hidden bg-neutral-35 font-Satoshi">
+    <div className="relative h-[300px] 2xl:h-[470px] overflow-hidden bg-neutral-35 font-Satoshi">
       <motion.div
         className="pt-20 2xl:pt-[112px]"
         variants={containerVariants}
@@ -39,24 +45,24 @@ const AboutUsHero = () => {
             className="heading-xl text-white text-center"
             variants={itemVariants}
           >
-           About Us
+            {title}
           </motion.h1>
           <motion.p
             className="text-neutral-50 description mt-2 2xl:mt-5 text-center"
             variants={itemVariants}
           >
-              So, who are we exactly?
+            {description}
           </motion.p>
         </Container>
       </motion.div>
-     
+
       <Image
         src={IMAGES.heroGradient}
         alt=""
         className="bottom-0 absolute left-0 right-0 w-full"
       />
     </div>
-  )
-}
+  );
+};
 
-export default AboutUsHero
+export default PageHero;

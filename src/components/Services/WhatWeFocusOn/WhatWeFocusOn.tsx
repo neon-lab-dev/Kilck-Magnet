@@ -5,13 +5,13 @@ import Image from "next/image";
 
 const WhatWeFocusOn = () => {
   return (
-    <div className="py-24 font-Satoshi">
+    <div className="container-padding font-Satoshi">
       <Container>
-        <h2 className="text-neutral-10 text-center text-5xl font-black leading-14 tracking-[-1px] mb-9 ">
+        <h2 className="text-neutral-10 text-center heading-xl mb-9 ">
           What we <span className="text-primary-10">focus on?</span>
         </h2>
-        <div className="w-max-[1200px] flex border border-neutral-100 rounded-[20px] mt-16">
-          <div className="p-7 space-y-7 text-neutral-10  flex-[40%] bg-gradient-secondary rounded-l-[20px]">
+        <div className="w-max-[1200px] flex flex-col lg:flex-row border border-neutral-100 rounded-[20px] mt-8 lg:mt-16">
+          <div className="p-7 space-y-7 text-neutral-10 flex-[40%] bg-gradient-secondary rounded-t-[20px] rounded-bl-none lg:rounded-tl-[20px] lg:rounded-bl-[20px] lg:rounded-t-none">
             <Image
               src={ICONS.target}
               alt=""
