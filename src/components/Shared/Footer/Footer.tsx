@@ -34,8 +34,6 @@ const Footer = () => {
     },
   ];
 
- 
-
   const contactInfo = [
     {
       icon: ICONS.phoneGray,
@@ -96,7 +94,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="bg-neutral-90 relative font-Satoshi pt-[180px] pb-[64px] mt-72 s">
+    <div className="bg-neutral-90 relative font-Satoshi pt-7 lg:pt-[180px] pb-[64px] mt-72 s">
       {/* Animated ScheduleCall Section */}
       <motion.div
         className="absolute w-full -top-72"
@@ -111,7 +109,7 @@ const Footer = () => {
       <Container>
         <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-20 ">
           {/* Left side logo and description */}
-          <div className="flex flex-col gap-4 text-white w-[30%]">
+          <div className="flex flex-col gap-4 text-white w-full lg:w-[30%]">
             <Link
               href={"/"}
               className="text-neutral-10 font-black font-Satoshi text-2xl"
@@ -124,7 +122,7 @@ const Footer = () => {
             </p>
           </div>
           {/* Right side links */}
-          <div className="flex flex-col lg:flex-row w-[70%] justify-between">
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-0 w-full lg:w-[70%] justify-between">
             {footerLinks?.map((item) => (
               <div key={item?.heading} className="flex flex-col gap-1">
                 <span className="text-neutral-65 font-medium leading-5">
@@ -183,7 +181,7 @@ const Footer = () => {
         <hr className="border border-neutral-55 w-full h-[2px] my-8" />
 
         {/* Copyright and scroll to top button */}
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col md:flex-row gap-5 md:gap-0 items-start md:items-center justify-between">
           <p className="text-neutral-25">
             ©2025 Klick Magnet. All rights reserved
           </p>
