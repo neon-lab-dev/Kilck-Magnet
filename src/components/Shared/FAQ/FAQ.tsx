@@ -30,8 +30,8 @@ const FAQ = () => {
 
   return (
     <Container>
-      <div className="font-Satoshi flex justify-between w-full py-[128px]">
-        <h1 className="text-[36px] font-bold leading-10 text-neutral-85 max-w-[300px]">
+      <div className="font-Satoshi flex flex-col lg:flex-row gap-8 lg:gap-0 justify-between w-full container-padding">
+        <h1 className="text-2xl md:text-[36px] font-bold leading-8 md:leading-10 text-neutral-85 max-w-[300px]">
           Frequently Asked Questions
         </h1>
         <div className="flex flex-col gap-5">
@@ -41,7 +41,7 @@ const FAQ = () => {
               className="text-neutral-10 border-b border-neutral-55 pb-5"
             >
               <div
-                className="flex cursor-pointer items-center justify-between max-w-[531px] w-full"
+                className="flex cursor-pointer items-center justify-between max-w-full 2xl:max-w-[531px] w-full"
                 onClick={() => handleClick(index)}
               >
                 <h2 className="font-medium leading-5">{according.title}</h2>

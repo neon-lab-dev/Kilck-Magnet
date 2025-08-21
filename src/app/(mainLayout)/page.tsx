@@ -25,7 +25,7 @@ export default function Home() {
       <GoogleReviews />
       <ContactUs />
       <Articles/>
-      {/* <FAQ /> */}
+      <FAQ />
     </div>
   );
 }

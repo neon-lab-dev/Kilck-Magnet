@@ -1,9 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import Container from "@/components/Reusable/Container/Container";
-import Image from "next/image";
 import React from "react";
-import { ICONS, IMAGES } from "../../../../public/assets";
+import { IMAGES } from "../../../../public/assets";
 import BlogsCards from "@/components/Blogs/BlogsCards";
 import { motion } from "framer-motion";
 import Button from "@/components/Reusable/Button/Button";
