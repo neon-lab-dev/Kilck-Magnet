@@ -71,7 +71,7 @@ const HamburgerMenu = () => {
                 href={link.path}
                 onClick={toggleHamburgerMenu}
                 className={`text-lg font-semibold transition ${
-                  location.pathname === link.path
+                  pathname === link.path
                     ? "text-white"
                     : "text-neutral-25"
                 }`}
