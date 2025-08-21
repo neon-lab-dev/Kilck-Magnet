@@ -19,8 +19,9 @@ const Navbar = () => {
             Klick Magnet
           </Link>
 
-          <div className="hidden lg:flex items-center gap-5">
-            {navlinks?.map((item) => (
+          <div className="flex items-center gap-5">
+            <div className="hidden lg:flex items-center gap-5">
+              {navlinks?.map((item) => (
               <Link
                 key={item?.label}
                 href={item?.path}
@@ -31,14 +32,15 @@ const Navbar = () => {
                 {item?.label}
               </Link>
             ))}
-            <Link
+            </div>
+              <Link
               href={"/"}
-              className="text-white font-medium p-[10px] rounded-lg border border-white"
+              className="text-white font-medium p-[10px] rounded-lg border border-white hidden md:block"
             >
               Get Started
             </Link>
-          </div>
           <HamburgerMenu/>
+          </div>
         </div>
       </Container>
     </div>
