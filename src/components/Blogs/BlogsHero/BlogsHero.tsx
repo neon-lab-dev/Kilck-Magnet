@@ -1,25 +1,60 @@
+"use client";
+
 import Container from "@/components/Reusable/Container/Container";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 import { IMAGES } from "../../../../public/assets";
 
 const BlogsHero = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
   return (
     <div className=" relative h-[470px] overflow-hidden bg-neutral-35 font-Satoshi">
-      <div className="pt-[112px]">
+      <motion.div
+        className="pt-[112px]"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <Container>
-          <h1 className="text-[64px] font-black leading-20 text-white text-center">
+          <motion.h1
+            className="text-[64px] font-black leading-20 text-white text-center"
+            variants={itemVariants}
+          >
             The Blogs
-          </h1>
-          <p className="text-neutral-50 text-[28px] leading-8 mt-5 text-center">
+          </motion.h1>
+          <motion.p
+            className="text-neutral-50 text-[28px] leading-8 mt-5 text-center"
+            variants={itemVariants}
+          >
             Create, innovate, and grow with us.
-          </p>
+          </motion.p>
         </Container>
-      </div>
+      </motion.div>
       <Image
         src={IMAGES.heroGradient}
         alt=""
-        className="bottom-0 absolute -top-20 w-full"
+        className="bottom-0 absolute left-0 right-0 w-full"
       />
     </div>
   );

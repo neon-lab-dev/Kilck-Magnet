@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,61 +6,35 @@ import React from "react";
 import { ICONS } from "../../../../public/assets";
 import Container from "@/components/Reusable/Container/Container";
 import ScheduleCall from "../ScheduleCall/ScheduleCall";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   const footerLinks = [
     {
-      heading: "Company",
+      heading: "Resources",
       links: [
-        { name: "Privacy Policy", href: "/privacy-policy" },
-        { name: "Terms of Use", href: "/terms-and-conditions" },
-        { name: "Refund Policy", href: "/refund-policy" },
-        { name: "About us", href: "/about-us" },
+        { name: "About", href: "/about-us" },
+        { name: "Blogs", href: "/blogs" },
         { name: "Contact us", href: "/contact-us" },
+        { name: "Portfolio", href: "/" },
+        { name: "FAQs", href: "/" },
+      ],
+    },
+  ];
+ const footerServices  = [
+    {
+     heading: "Our Services",
+      links: [
+        { name: "Web Development", href: "/" },
+        { name: "Graphic Designing", href: "/" },
+        { name: "Social Media Marketing", href: "/" },
+        { name: "SEO", href: "/services" },
+        { name: "3D Walkthrough", href: "/" },
       ],
     },
   ];
 
-  const importantLinks = [
-    {
-      label: "Jobs",
-      action: () => {
-        window.location.href = "/jobs";
-      },
-    },
-    {
-      label: "Internships",
-      action: () => {
-        window.location.href = "/internships";
-      },
-    },
-    {
-      label: "Skill Programmes",
-      action: () => {
-        window.location.href = "/skill-programmes";
-      },
-    },
-    {
-      label: "Courses",
-      action: () => {
-        window.location.href = "/courses";
-      },
-    },
-    {
-      label: "Trending Today",
-      action: () => {
-        const section = document.getElementById("trending-today");
-        if (section) section.scrollIntoView({ behavior: "smooth" });
-      },
-    },
-    {
-      label: "Events",
-      action: () => {
-        const section = document.getElementById("events");
-        if (section) section.scrollIntoView({ behavior: "smooth" });
-      },
-    },
-  ];
+ 
 
   const contactInfo = [
     {
@@ -104,35 +79,58 @@ const Footer = () => {
       href: "https://www.instagram.com/medhrplus/",
     },
   ];
+
+  // Animation variant for a slight bounce effect
+  const bounceVariant:any = {
+    hidden: { y: 100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10, // Lower damping creates more bounce
+        duration: 0.8,
+      },
+    },
+  };
+
   return (
-    <div className="bg-neutral-90 relative font-Satoshi pt-[180px] pb-[64px] mt-72">
-         <div className="absolute w-full -top-72">
-            <ScheduleCall/>
-         </div>
+    <div className="bg-neutral-90 relative font-Satoshi pt-[180px] pb-[64px] mt-72 s">
+      {/* Animated ScheduleCall Section */}
+      <motion.div
+        className="absolute w-full -top-72"
+        initial="hidden"
+        whileInView="visible"
+        variants={bounceVariant}
+        viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of it is in view
+      >
+        <ScheduleCall />
+      </motion.div>
+
       <Container>
         <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-20 ">
           {/* Left side logo and description */}
-          <div className="flex flex-col gap-4 text-white w-[20%]">
+          <div className="flex flex-col gap-4 text-white w-[30%]">
             <Link
               href={"/"}
               className="text-neutral-10 font-black font-Satoshi text-2xl"
             >
               Klick Magnet
             </Link>
-            <p className="text-neutral-60  ">
+            <p className="text-neutral-60">
               Excellence decisively nay man twins impression maximum contrasted
               remarkably is perfect.
             </p>
           </div>
           {/* Right side links */}
-          <div className="flex flex-col lg:flex-row gap-10 lg:gap-20">
+          <div className="flex flex-col lg:flex-row w-[70%] justify-between">
             {footerLinks?.map((item) => (
               <div key={item?.heading} className="flex flex-col gap-1">
                 <span className="text-neutral-65 font-medium leading-5">
                   {item?.heading}
                 </span>
                 <ul className="text-neutral-65 leading-5 flex flex-col gap-4 mt-3">
-                  {/* Using map to render other links */}
                   {item?.links.map((link, index) => (
                     <li key={index}>
                       <Link href={link.href} className="hover:underline">
@@ -144,29 +142,28 @@ const Footer = () => {
               </div>
             ))}
 
-            <div className="flex flex-col gap-1">
-              <span className="text-neutral-65 font-medium leading-5">
-                Important
-              </span>
-              <div className="text-neutral-65 leading-5 flex flex-col gap-4 mt-3">
-                {importantLinks.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex gap-2 cursor-pointer"
-                    onClick={item.action}
-                  >
-                    <span className="hover:underline">{item.label}</span>
-                  </div>
-                ))}
+            {footerServices?.map((item) => (
+              <div key={item?.heading} className="flex flex-col gap-1">
+                <span className="text-neutral-65 font-medium leading-5">
+                  {item?.heading}
+                </span>
+                <ul className="text-neutral-65 leading-5 flex flex-col gap-4 mt-3">
+                  {item?.links.map((link, index) => (
+                    <li key={index}>
+                      <Link href={link.href} className="hover:underline">
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </div>
+            ))}
 
             <div className="flex flex-col gap-1 max-w-[400px]">
               <span className="text-neutral-65 font-medium leading-5">
                 Contact Info
               </span>
               <div className="text-neutral-65 leading-5 flex flex-col gap-4 mt-3">
-                {/* Using map to render other links */}
                 {contactInfo?.map((item, index) => (
                   <div key={index} className="flex gap-2">
                     <Image src={item?.icon} alt={""} className="size-5" />
@@ -190,7 +187,6 @@ const Footer = () => {
           <p className="text-neutral-25">
             ©2025 Klick Magnet. All rights reserved
           </p>
-          {/* Scroll to top button */}
           <div className="flex items-center gap-4">
             {socialLinks?.map((item) => (
               <a
@@ -208,4 +204,5 @@ const Footer = () => {
     </div>
   );
 };
+
 export default Footer;

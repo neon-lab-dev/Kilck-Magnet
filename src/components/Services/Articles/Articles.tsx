@@ -1,13 +1,13 @@
-"use client"
+/* eslint-disable @typescript-eslint/no-explicit-any */
+"use client";
 import Container from "@/components/Reusable/Container/Container";
 import Image from "next/image";
 import React from "react";
 import { ICONS, IMAGES } from "../../../../public/assets";
 import BlogsCards from "@/components/Blogs/BlogsCards";
-import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 
 const Articles = () => {
-
   const blogsData = [
     {
       _id: "1",
@@ -32,30 +32,87 @@ const Articles = () => {
     },
   ];
 
+  const containerVariants:any = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const cardVariants:any = {
+    hidden: { opacity: 0, y: 100, scale: 0.8,  },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      rotate: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const itemVariants:any = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
-    <div className="py-24 font-Satoshi">
+    <div className="py-24 font-Satoshi overflow-hidden">
       <Container>
         <div className="space-y-12">
-          <h2 className="text-neutral-10 text-5xl font-black">
+          <motion.h2
+            className="text-neutral-10 text-5xl font-black"
+            initial="hidden"
+            whileInView="visible"
+            variants={itemVariants}
+            viewport={{ once: true }}
+          >
             Read Articles
-          </h2>
+          </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16"
+            initial="hidden"
+            whileInView="visible"
+            variants={containerVariants}
+            viewport={{ once: true, amount: 0.1 }}
+          >
             {blogsData.map((blog) => (
-              <BlogsCards
-                key={blog._id}
-                id={blog._id}
-                title={blog.title}
-                description={blog.description}
-                image={blog.image}
-              />
+              <motion.div key={blog._id} variants={cardVariants}>
+                <BlogsCards
+                  id={blog._id}
+                  title={blog.title}
+                  description={blog.description}
+                  image={blog.image}
+                />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
-          <button className="bg-gradient-primary shadow-primary-button2 py-6 px-8 rounded-[999px] text-white text-2xl font-bold leading-5 mt-8 flex items-center gap-[10px] w-fit">
-            Get in touch
-            <Image src={ICONS.rightArrowWhite} alt="" className="size-6" />
-          </button>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={itemVariants}
+            viewport={{ once: true }}
+            className="w-fit"
+          >
+            <button className="bg-gradient-primary shadow-primary-button2 py-6 px-8 rounded-[999px] text-white text-2xl font-bold leading-5 mt-8 flex items-center gap-[10px] w-fit">
+              Get in touch
+              <Image src={ICONS.rightArrowWhite} alt="" className="size-6" />
+            </button>
+          </motion.div>
         </div>
       </Container>
     </div>

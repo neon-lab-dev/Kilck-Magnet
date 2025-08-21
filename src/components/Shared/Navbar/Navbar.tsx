@@ -1,9 +1,7 @@
 "use client";
 import Container from "@/components/Reusable/Container/Container";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { IMAGES } from "../../../../public/assets";
 
 const Navbar = () => {
   const pathname = usePathname();

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { motion } from "framer-motion";
 import Container from "@/components/Reusable/Container/Container";
@@ -5,28 +6,26 @@ import Image from "next/image";
 import { ICONS, IMAGES } from "../../../../public/assets";
 
 const AboutUs = () => {
-  // Variant for the left-side content (sliding in from the left)
-  const leftVariant = {
+  const leftVariant:any = {
     hidden: { opacity: 0, x: -100 },
     visible: {
       opacity: 1,
       x: 0,
       transition: {
         duration: 0.8,
-        ease: [0.6, 0.01, -0.05, 0.95], // A nice easing curve for a smooth, impactful effect
+        ease: [0.6, 0.01, -0.05, 0.95],
       },
     },
   };
 
-  // Variant for the right-side image (sliding in from the right)
-  const rightVariant = {
+  const rightVariant: any = {
     hidden: { opacity: 0, x: 100 },
     visible: {
       opacity: 1,
       x: 0,
       transition: {
         duration: 0.8,
-        delay: 0.2, // A slight delay to make the entrance more dynamic
+        delay: 0.2,
         ease: [0.6, 0.01, -0.05, 0.95],
       },
     },
@@ -34,17 +33,7 @@ const AboutUs = () => {
 
   return (
     <Container>
-      {/* The main flex container. We add overflow-x-hidden to the parent
-          to prevent horizontal scrollbars during the animation. */}
       <div className="flex justify-between items-center py-[150px] bg-white overflow-x-hidden">
-        {/*
-          LEFT SIDE: Text content animation
-          - motion.div: The element to be animated.
-          - variants: Links to our pre-defined animation states.
-          - initial="hidden": Sets the starting state of the animation.
-          - whileInView="visible": Triggers the "visible" state when the element enters the viewport.
-          - viewport={{ once: true, amount: 0.5 }}: Ensures the animation runs only once when 50% of the element is visible.
-        */}
         <motion.div
           className="font-Satoshi flex flex-col gap-8"
           variants={leftVariant}
@@ -76,7 +65,7 @@ const AboutUs = () => {
           </button>
         </motion.div>
 
-        {/* RIGHT SIDE: Image animation */}
+        {/* RIGHT SIDE: Image*/}
         <motion.div
           variants={rightVariant}
           initial="hidden"
