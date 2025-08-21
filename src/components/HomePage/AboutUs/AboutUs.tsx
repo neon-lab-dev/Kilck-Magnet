@@ -1,26 +1,24 @@
 "use client";
 import Container from "@/components/Reusable/Container/Container";
 import Image from "next/image";
-import { ICONS, IMAGES } from "../../../../public/assets";
+import { IMAGES } from "../../../../public/assets";
+import Button from "@/components/Reusable/Button/Button";
 
 const AboutUs = () => {
-
   return (
     <Container>
-      <div className="flex justify-between items-center gap-10 py-[150px] bg-white overflow-x-hidden">
-        <div
-          className="font-Satoshi flex flex-col gap-8 w-[60%]"
-        >
+      <div className="flex flex-col lg:flex-row justify-between items-center gap-10 py-20 2xl:py-[150px] bg-white overflow-x-hidden">
+        <div className="font-Satoshi flex flex-col gap-5 2xl:gap-8 w-full lg:w-[60%]">
           <div>
-            <h2 className="text-primary-20 text-2xl font-black leading-8">
+            <h2 className="text-primary-20 text-lg 2xl:text-2xl font-black leading-8">
               ABOUT US
             </h2>
-            <h1 className="text-neutral-10 text-[48px] font-black leading-[56px] mt-2">
+            <h1 className="text-neutral-10 text-[26px] md:text-[32px] 2xl:text-[48px] font-black leading-10 md:leading-[56px] 2xl:leading-[56px] mt-2">
               Built by Dreamers. Backed by Data.{" "}
               <span className="text-primary-15">Driven by Results.</span>
             </h1>
           </div>
-          <p className="text-neutral-20 text-2xl leading-8">
+          <p className="text-neutral-20 text-base 2xl:text-2xl leading-7 lg:leading-8">
             We’re a tight-knit team of creators, strategists, and
             problem-solvers obsessed with helping brands grow. From bold ideas
             to flawless execution, we blend design, tech, and marketing to craft
@@ -29,16 +27,11 @@ const AboutUs = () => {
             We don’t do templates. We don’t do average. We build what your
             competitors wish they had.
           </p>
-          <button className="bg-gradient-primary shadow-primary-button2 py-6 px-8 rounded-[999px] text-white text-2xl font-bold leading-5 mt-8 flex items-center gap-[10px] w-fit">
-            Get in touch
-            <Image src={ICONS.rightArrowWhite} alt="" className="size-6" />
-          </button>
+          <Button label="Get in Touch" variant="primary" rounded="full" />
         </div>
 
         {/* RIGHT SIDE: Image*/}
-        <div
-        className="w-[40%]"
-        >
+        <div className="w-full lg:w-[40%]">
           <Image src={IMAGES.aboutUs} alt="" className="" />
         </div>
       </div>

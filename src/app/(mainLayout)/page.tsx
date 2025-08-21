@@ -13,9 +13,9 @@ export default function Home() {
   return (
     <div>
       <Hero/>
-      {/* <ProudPartners />
+      <ProudPartners />
       <AboutUs />
-      <div className="relative">
+      {/* <div className="relative">
         <OurMetrics />
         <div className="absolute top-[600px] w-full">
           <OurServices />
