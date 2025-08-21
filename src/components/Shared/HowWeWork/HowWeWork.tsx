@@ -79,7 +79,7 @@ const HowWeWork = () => {
                 </div>
               ))}
             </div>
-            <div className="bg-[#fff2f2] rounded-[999px] p-3 flex items-center justify-center h-fit  mt-24">
+            <div className="bg-[#fff2f2] rounded-[999px] p-3 flex items-center justify-center h-fit mt-24">
               <div className="bg-[#ffe6e6] rounded-[999px] p-3 flex items-center justify-center h-fit w-full">
                 <button className="bg-gradient-primary shadow-primary-button2 py-6 px-8 rounded-[999px] text-white text-2xl font-bold leading-5 flex items-center justify-center gap-[10px] w-full mx-auto">
                   Let’s get started
