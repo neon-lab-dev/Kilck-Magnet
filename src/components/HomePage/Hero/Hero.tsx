@@ -41,7 +41,7 @@ const Hero = () => {
            
             <motion.div variants={itemVariants}>
                <motion.div variants={itemVariants}> <div className="bg-neutral-40 border border-neutral-45 py-2 md:py-[10px] px-3 md:px-5 rounded-[100px] text-white text-xs xl:text-base font-normal xl:font-medium leading-5 w-fit"> Built for Ambitious Brands. Designed for Results. </div> </motion.div>
-              <h1 className="text-[28px] md:text-[48px] 2xl:text-[72px] font-black leading-10 md:leading-[56px] lg:leading-[68px] 2xl:leading-[80px] text-white max-w-[700px] 2xl:max-w-[900px] mt-4">
+              <h1 className="heading-2xl text-white max-w-[700px] 2xl:max-w-[900px] mt-4">
                 Turn Clicks into Clients. Build a Brand That Performs.
               </h1>
               <p className="text-neutral-50 text-sm md:text-base 2xl:text-[20px] leading-5 md:leading-7 mt-4 max-w-[700px]">

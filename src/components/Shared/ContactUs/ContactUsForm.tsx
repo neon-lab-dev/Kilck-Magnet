@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useForm } from "react-hook-form";
 
 const ContactUsForm = () => {
-    const pathname = usePathname();
+  const pathname = usePathname();
   const {
     register,
     handleSubmit,
@@ -14,7 +14,11 @@ const ContactUsForm = () => {
     reset,
   } = useForm<any>();
   return (
-    <form className={`flex flex-col gap-8 z-10 ${pathname === "/contact-us" ? "gap-6" : "gap-8"}`}>
+    <form
+      className={`flex flex-col z-10 ${
+        pathname === "/contact-us" ? "gap-4 md:gap-6" : "gap-4 md:gap-8"
+      }`}
+    >
       <TextInput
         label="Your Name"
         placeholder="Enter your full name"

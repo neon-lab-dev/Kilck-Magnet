@@ -114,7 +114,13 @@
 
 @layer utilities {
   .heading-xl {
-    @apply text-[26px] md:text-[32px] 2xl:text-[48px] font-black leading-10 md:leading-[56px];
+    @apply text-[26px] md:text-[32px] 2xl:text-[48px] font-black leading-10 md:leading-11 lg:leading-[56px];
+  }
+}
+
+@layer utilities {
+  .heading-2xl {
+    @apply text-[28px] md:text-[48px] 2xl:text-[72px] font-black leading-10 md:leading-[56px] lg:leading-[68px] 2xl:leading-[80px];
   }
 }
 

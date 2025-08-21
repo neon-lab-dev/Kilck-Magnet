@@ -59,13 +59,13 @@ const GoogleReviews = () => {
 
   return (
     <motion.div
-      className="bg-neutral-65 py-[96px] font-Satoshi"
+      className="bg-neutral-65 py-10 2xl:py-[96px] font-Satoshi"
       initial="hidden"
       whileInView="visible"
       variants={sectionSlideUpVariant}
       viewport={{ once: true, amount: 0.2 }}
     >
-      <h1 className="text-white text-center text-[48px] font-black leading-[56px]">
+      <h1 className="text-white text-center heading-xl font-black leading-[56px]">
         Our Google Reviews
       </h1>
 

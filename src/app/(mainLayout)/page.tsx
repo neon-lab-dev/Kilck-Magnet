@@ -22,9 +22,9 @@ export default function Home() {
         </div>
       </div>
       <HowWeWork />
-      {/* <GoogleReviews />
+      <GoogleReviews />
       <ContactUs />
-      <Articles/>
+      {/* <Articles/>
       <FAQ /> */}
     </div>
   );
