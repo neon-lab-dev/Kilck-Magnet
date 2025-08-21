@@ -2,31 +2,12 @@
 import Container from "@/components/Reusable/Container/Container";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { navlinks } from "./navlinks";
+import HamburgerMenu from "./HamburgerMenu";
 
 const Navbar = () => {
   const pathname = usePathname();
-  const navlinks = [
-    {
-      label: "Home",
-      path: "/",
-    },
-    {
-      label: "About Us",
-      path: "/about-us",
-    },
-    {
-      label: "Services",
-      path: "/services",
-    },
-    {
-      label: "Blogs",
-      path: "/blogs",
-    },
-    {
-      label: "Contact Us",
-      path: "/contact-us",
-    },
-  ];
+
   return (
     <div className="bg-neutral-35 font-Satoshi">
       <Container>
@@ -38,7 +19,7 @@ const Navbar = () => {
             Klick Magnet
           </Link>
 
-          <div className="flex items-center gap-5">
+          <div className="hidden lg:flex items-center gap-5">
             {navlinks?.map((item) => (
               <Link
                 key={item?.label}
@@ -57,6 +38,7 @@ const Navbar = () => {
               Get Started
             </Link>
           </div>
+          <HamburgerMenu/>
         </div>
       </Container>
     </div>

@@ -65,6 +65,7 @@ import setting from "./icons/settings.svg";
 import target from "./icons/target.svg";
 import tick from "./icons/tick.svg";
 import cross from "./icons/cross.svg";
+import menu from "./icons/menu.svg";
 
 
 export const IMAGES = {
@@ -133,7 +134,8 @@ export const ICONS = {
   setting,
   target,
   tick,
-  cross
+  cross,
+  menu,
 
 
 };

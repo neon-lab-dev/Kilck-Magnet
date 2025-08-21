@@ -1,45 +1,15 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-import { motion } from "framer-motion";
 import Container from "@/components/Reusable/Container/Container";
 import Image from "next/image";
 import { ICONS, IMAGES } from "../../../../public/assets";
 
 const AboutUs = () => {
-  const leftVariant:any = {
-    hidden: { opacity: 0, x: -100 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.8,
-        ease: [0.6, 0.01, -0.05, 0.95],
-      },
-    },
-  };
-
-  const rightVariant: any = {
-    hidden: { opacity: 0, x: 100 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.8,
-        delay: 0.2,
-        ease: [0.6, 0.01, -0.05, 0.95],
-      },
-    },
-  };
 
   return (
     <Container>
-      <div className="flex justify-between items-center py-[150px] bg-white overflow-x-hidden">
-        <motion.div
-          className="font-Satoshi flex flex-col gap-8"
-          variants={leftVariant}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
+      <div className="flex justify-between items-center gap-10 py-[150px] bg-white overflow-x-hidden">
+        <div
+          className="font-Satoshi flex flex-col gap-8 w-[60%]"
         >
           <div>
             <h2 className="text-primary-20 text-2xl font-black leading-8">
@@ -63,17 +33,14 @@ const AboutUs = () => {
             Get in touch
             <Image src={ICONS.rightArrowWhite} alt="" className="size-6" />
           </button>
-        </motion.div>
+        </div>
 
         {/* RIGHT SIDE: Image*/}
-        <motion.div
-          variants={rightVariant}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
+        <div
+        className="w-[40%]"
         >
           <Image src={IMAGES.aboutUs} alt="" className="" />
-        </motion.div>
+        </div>
       </div>
     </Container>
   );

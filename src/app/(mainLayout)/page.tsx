@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div>
       <Hero/>
-      <ProudPartners />
+      {/* <ProudPartners />
       <AboutUs />
       <div className="relative">
         <OurMetrics />
@@ -25,7 +25,7 @@ export default function Home() {
       <GoogleReviews />
       <ContactUs />
       <Articles/>
-      <FAQ />
+      <FAQ /> */}
     </div>
   );
 }
