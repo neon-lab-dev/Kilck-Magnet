@@ -27,22 +27,22 @@ const AboutUsHero = () => {
     },
   };
   return (
-     <div className=" relative h-[470px] overflow-hidden bg-neutral-35 font-Satoshi">
+     <div className="relative h-[300px] 2xl:h-[470px] overflow-hidden bg-neutral-35 font-Satoshi">
       <motion.div
-        className="pt-[112px]"
+        className="pt-20 2xl:pt-[112px]"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         <Container>
           <motion.h1
-            className="text-[64px] font-black leading-20 text-white text-center"
+            className="heading-xl text-white text-center"
             variants={itemVariants}
           >
            About Us
           </motion.h1>
           <motion.p
-            className="text-neutral-50 text-[28px] leading-8 mt-5 text-center"
+            className="text-neutral-50 description mt-2 2xl:mt-5 text-center"
             variants={itemVariants}
           >
               So, who are we exactly?

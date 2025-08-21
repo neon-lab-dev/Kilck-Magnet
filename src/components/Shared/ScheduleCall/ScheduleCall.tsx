@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { ICONS, IMAGES } from "../../../../public/assets";
+import {IMAGES } from "../../../../public/assets";
 import Container from "@/components/Reusable/Container/Container";
 import Button from "@/components/Reusable/Button/Button";
 
@@ -8,12 +8,12 @@ const ScheduleCall = () => {
   return (
     <Container>
       <div
-      className="relative space-y-8 rounded-xl lg:rounded-[40px] p-5 lg:p-16 font-Satoshi overflow-hidden max-w-[1218px] mx-auto shadow-schedule-call z-500"
+      className="relative space-y-8 rounded-xl lg:rounded-[40px] p-5 lg:p-16 font-Satoshi overflow-hidden max-w-[1218px] mx-auto shadow-schedule-call"
       style={{
         background: "linear-gradient(180deg, #FF6467 0%, #FB2C36 100%)"
       }}
     >
-      <Image src={IMAGES.ScheduleGradient} alt="" className="absolute h-full w-full top-0 rounded-[40px] right-0 "/>
+      <Image src={IMAGES.ScheduleGradient} alt="" className="absolute h-full w-full top-0 rounded-xl lg:rounded-[40px] right-0 "/>
       <Image src={IMAGES.magnetBg} alt="" className="absolute h-full w-full top-0 bottom-0 -right-60 "/>
       <Image src={IMAGES.scheduleMagnet} alt="" className="hidden lg:block absolute top-10 bottom-0 right-10 2xl:right-40 "/>
 

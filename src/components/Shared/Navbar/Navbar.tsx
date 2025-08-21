@@ -9,7 +9,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="bg-neutral-35 font-Satoshi">
+    <div className="bg-neutral-35 font-Satoshi sticky top-0 z-50">
       <Container>
         <div className="flex items-center justify-between py-5">
           <Link

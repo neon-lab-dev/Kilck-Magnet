@@ -34,7 +34,7 @@ const AnimatedNumber: React.FC<{ value: string }> = ({ value }) => {
   return (
     <motion.p
       ref={ref}
-      className="text-neutral-15 text-[56px] font-black leading-16 tracking-[-1px]"
+      className="text-neutral-15 heading-xl font-black leading-16 tracking-[-1px]"
       onViewportEnter={handleViewportEnter}
     >
     </motion.p>
@@ -51,26 +51,26 @@ const Counter = () => {
   ];
 
   return (
-    <div className="bg-primary-30 font-Satoshi py-16 ">
+    <div className="bg-primary-30 font-Satoshi py-20 lg:py-28">
       <Container>
-        <h2 className="text-neutral-10 text-center text-5xl font-black leading-14 tracking-[-1px] mb-9 ">
+        <h2 className="text-neutral-10 text-center heading-xl font-black leading-14 tracking-[-1px] mb-9 ">
           Our Numbers Speak for <span className="text-primary-10"> Themselves..</span>
         </h2>
-        <div className="flex flex-wrap item-center p-6 justify-center gap-x-9">
+        <div className="grid grid-cols-2 lg:grid-cols-4 item-center justify-center gap-9 lg:gap-0">
           {counters.map((item, index) => (
             <React.Fragment key={index}>
-              <div className="flex flex-col w-[268px] justify-center text-center space-y-1 p-6">
+              <div className="flex flex-col w-fit lg:w-[268px] justify-center text-center space-y-1">
                 
                 <AnimatedNumber value={item.value} />
 
-                <p className="text-neutral-20 text-2xl leading-7 tracking-[-0.5px]">
+                <p className="text-neutral-20 text-xl md:text-2xl leading-7 tracking-[-0.5px]">
                   {item.label}
                 </p>
               </div>
               {/* Divider after each except last */}
-              {index < counters.length - 1 && (
-                <div className="w-1 h-[70px] flex justify-center items-center my-auto bg-primary-40"></div>
-              )}
+              {/* {index < counters.length - 1 && (
+                <div className="hidden w-1 h-[70px] xl:flex justify-center items-center my-auto bg-primary-40"></div>
+              )} */}
             </React.Fragment>
           ))}
         </div>
