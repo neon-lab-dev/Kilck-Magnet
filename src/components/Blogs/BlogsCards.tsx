@@ -32,7 +32,7 @@ const BlogsCards: React.FC<BlogsCardsProps> = ({
           <h3 className="text-neutral-10 font-bold leading-6 text-xl">
             {title}
           </h3>
-          <p className="line-clamp-3 text-neutral-70 text-lg leading-7">
+          <p className="line-clamp-3 text-neutral-70 text-sm md:text-lg leading-7">
             {description}
           </p>
         </div>
@@ -40,10 +40,10 @@ const BlogsCards: React.FC<BlogsCardsProps> = ({
 
       <Link
         href={`/blogs/${id}`}
-        className="cursor-pointer flex justify-start items-center gap-2 text-lg font-medium leading-6 tracking-[-0.6px] text-primary-10 w-fit"
+        className="cursor-pointer flex justify-start items-center gap-2 text-sm lg:text-lg font-medium leading-6 tracking-[-0.6px] text-primary-10 w-fit"
       >
         <span>{buttonLabel}</span>
-        <Image src={ICONS.rightArrow} alt="icon" className="size-5" />
+        <Image src={ICONS.rightArrow} alt="icon" className="size04 lg:size-5" />
       </Link>
     </div>
   );

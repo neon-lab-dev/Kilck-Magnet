@@ -24,8 +24,8 @@ export default function Home() {
       <HowWeWork />
       <GoogleReviews />
       <ContactUs />
-      {/* <Articles/>
-      <FAQ /> */}
+      <Articles/>
+      {/* <FAQ /> */}
     </div>
   );
 }

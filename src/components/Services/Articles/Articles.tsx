@@ -6,6 +6,7 @@ import React from "react";
 import { ICONS, IMAGES } from "../../../../public/assets";
 import BlogsCards from "@/components/Blogs/BlogsCards";
 import { motion } from "framer-motion";
+import Button from "@/components/Reusable/Button/Button";
 
 const Articles = () => {
   const blogsData = [
@@ -32,7 +33,7 @@ const Articles = () => {
     },
   ];
 
-  const containerVariants:any = {
+  const containerVariants: any = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -42,8 +43,8 @@ const Articles = () => {
     },
   };
 
-  const cardVariants:any = {
-    hidden: { opacity: 0, y: 100, scale: 0.8,  },
+  const cardVariants: any = {
+    hidden: { opacity: 0, y: 100, scale: 0.8 },
     visible: {
       opacity: 1,
       y: 0,
@@ -56,7 +57,7 @@ const Articles = () => {
     },
   };
 
-  const itemVariants:any = {
+  const itemVariants: any = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
@@ -71,9 +72,9 @@ const Articles = () => {
   return (
     <div className="py-24 font-Satoshi overflow-hidden">
       <Container>
-        <div className="space-y-12">
+        <div className="space-y-7 lg:space-y-12">
           <motion.h2
-            className="text-neutral-10 text-5xl font-black"
+            className="text-neutral-10 heading-xl"
             initial="hidden"
             whileInView="visible"
             variants={itemVariants}
@@ -83,7 +84,7 @@ const Articles = () => {
           </motion.h2>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9 lg:gap-16"
             initial="hidden"
             whileInView="visible"
             variants={containerVariants}
@@ -108,10 +109,7 @@ const Articles = () => {
             viewport={{ once: true }}
             className="w-fit"
           >
-            <button className="bg-gradient-primary shadow-primary-button2 py-6 px-8 rounded-[999px] text-white text-2xl font-bold leading-5 mt-8 flex items-center gap-[10px] w-fit">
-              Get in touch
-              <Image src={ICONS.rightArrowWhite} alt="" className="size-6" />
-            </button>
+            <Button label="Get in Touch" variant="primary" rounded="full" />
           </motion.div>
         </div>
       </Container>
