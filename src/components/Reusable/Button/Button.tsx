@@ -22,7 +22,7 @@ const Button = ({
   // Variant styles
   const variantClasses = {
     primary: "bg-gradient-primary text-white",   //shadow-primary-button 
-    secondary: "bg-white text-neutral-800 border border-neutral-300 shadow-sm",
+    secondary: "bg-white text-primary-10 border border-neutral-300 shadow-sm",
   };
 
   // Rounded styles
@@ -48,7 +48,7 @@ const Button = ({
     >
       {label}
       {isIconVisible && (
-        <Image src={variant === "primary" ? ICONS.rightArrowWhite : ICONS.rightArrowGray} alt="" className="size-4 md:size-5 2xl:size-6" />
+        <Image src={variant === "primary" ? ICONS.rightArrowWhite : ICONS.rightArrow} alt="" className="size-4 md:size-5 2xl:size-6" />
       )}
     </button>
   );

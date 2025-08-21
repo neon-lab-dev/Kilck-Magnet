@@ -111,3 +111,21 @@
   scrollbar-width: none;
 }
 
+
+@layer utilities {
+  .heading-xl {
+    @apply text-[26px] md:text-[32px] 2xl:text-[48px] font-black leading-10 md:leading-[56px];
+  }
+}
+
+@layer utilities {
+  .description {
+    @apply text-base 2xl:text-2xl leading-7 lg:leading-8;
+  }
+}
+
+@layer utilities {
+  .container-padding {
+    @apply py-20 2xl:py-[150px];
+  }
+}

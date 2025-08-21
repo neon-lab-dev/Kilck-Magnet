@@ -7,18 +7,18 @@ import Button from "@/components/Reusable/Button/Button";
 const AboutUs = () => {
   return (
     <Container>
-      <div className="flex flex-col lg:flex-row justify-between items-center gap-10 py-20 2xl:py-[150px] bg-white overflow-x-hidden">
+      <div className="flex flex-col lg:flex-row justify-between items-center gap-10 container-padding bg-white overflow-x-hidden">
         <div className="font-Satoshi flex flex-col gap-5 2xl:gap-8 w-full lg:w-[60%]">
           <div>
             <h2 className="text-primary-20 text-lg 2xl:text-2xl font-black leading-8">
               ABOUT US
             </h2>
-            <h1 className="text-neutral-10 text-[26px] md:text-[32px] 2xl:text-[48px] font-black leading-10 md:leading-[56px] 2xl:leading-[56px] mt-2">
+            <h1 className="text-neutral-10 heading-xl mt-2">
               Built by Dreamers. Backed by Data.{" "}
               <span className="text-primary-15">Driven by Results.</span>
             </h1>
           </div>
-          <p className="text-neutral-20 text-base 2xl:text-2xl leading-7 lg:leading-8">
+          <p className="text-neutral-20 description">
             We’re a tight-knit team of creators, strategists, and
             problem-solvers obsessed with helping brands grow. From bold ideas
             to flawless execution, we blend design, tech, and marketing to craft

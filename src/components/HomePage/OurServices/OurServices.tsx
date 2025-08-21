@@ -6,6 +6,7 @@ import Image from "next/image";
 import Container from "@/components/Reusable/Container/Container";
 import ServiceCard from "./ServiceCard";
 import { motion } from "framer-motion";
+import Button from "@/components/Reusable/Button/Button";
 
 const OurServices = ({
   title = "How it Works",
@@ -99,13 +100,13 @@ const OurServices = ({
               variants={containerVariants}
             >
               <motion.h1
-                className="font-black text-[64px] leading-[72px] text-center text-white"
+                className="text-white text-[28px] md:text-[48px] 2xl:text-[72px] font-black leading-10 md:leading-[56px] lg:leading-[68px] 2xl:leading-[80px] text-center"
                 variants={itemVariants}
               >
                 {title}
               </motion.h1>
               <motion.p
-                className="text-neutral-50 text-[28px] leading-8 max-w-[698px] mx-auto mt-4 font-normal"
+                className="text-neutral-50 description max-w-[698px] mx-auto mt-4 font-normal"
                 variants={itemVariants}
               >
                 {sectionDescription}
@@ -114,11 +115,11 @@ const OurServices = ({
           </div>
         </div>
 
-        <div className="absolute w-full mx-auto top-[450px]">
+        <div className="absolute w-full mx-auto top-[340px] 2xl:top-[450px]">
           <Container>
             {/* Animated Service Cards Grid */}
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-10"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.1 }}
@@ -139,10 +140,7 @@ const OurServices = ({
               variants={itemVariants}
               className="flex justify-center mt-10"
             >
-              <button className="bg-gradient-primary shadow-primary-button2 py-6 px-8 rounded-[999px] text-white text-2xl font-bold leading-5 flex items-center gap-[10px] w-fit">
-                Get to know more
-                <Image src={ICONS.rightArrowWhite} alt="" className="size-6" />
-              </button>
+              <Button label="Get to Know More" variant="primary" rounded="full" />
             </motion.div>
           </Container>
         </div>

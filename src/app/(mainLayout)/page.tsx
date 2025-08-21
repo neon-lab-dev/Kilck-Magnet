@@ -15,13 +15,13 @@ export default function Home() {
       <Hero/>
       <ProudPartners />
       <AboutUs />
-      {/* <div className="relative">
+      <div className="relative">
         <OurMetrics />
-        <div className="absolute top-[600px] w-full">
+        <div className="absolute top-[800px] 2xl:top-[600px] w-full">
           <OurServices />
         </div>
       </div>
-      <HowWeWork />
+      {/* <HowWeWork />
       <GoogleReviews />
       <ContactUs />
       <Articles/>
