@@ -17,7 +17,7 @@ export default function Home() {
       <AboutUs />
       <div className="relative">
         <OurMetrics />
-        <div className="absolute top-[800px] 2xl:top-[600px] w-full">
+        <div className="absolute top-[800px] lg:top-[500px] 2xl:top-[600px] w-full">
           <OurServices />
         </div>
       </div>

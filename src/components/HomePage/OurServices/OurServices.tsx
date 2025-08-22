@@ -87,7 +87,7 @@ const OurServices = ({
 
   return (
     <div className="w-full font-Satoshi relative pb-20 overflow-hidden">
-      <div className="relative w-full h-[1300px]">
+      <div className="relative w-full h-[2250px] md:h-[1300px]">
         <div className="h-[648px] absolute w-full flex items-center justify-center">
           <Image src={IMAGES.ourService} alt="" className="w-full h-[648px]" />
           <div className="flex flex-col items-center justify-center z-50 absolute top-40 right-0 left-0">

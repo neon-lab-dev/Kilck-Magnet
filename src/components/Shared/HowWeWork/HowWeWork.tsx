@@ -78,7 +78,7 @@ const HowWeWork = () => {
   return (
     <div
       className={`container-padding relative font-Satoshi ${
-        pathname === "/" ? "mt-[1100px]" : "mt-0"
+        pathname === "/" ? "mt-[2150px] md:mt-[1100px]" : "mt-0"
       }`}
     >
       <Image
