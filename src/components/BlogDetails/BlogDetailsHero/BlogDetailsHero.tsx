@@ -12,16 +12,16 @@ const BlogDetailsHero = () => {
       <Container>
         {/* Breadcrumb */}
         <div className="flex flex-row gap-2 items-center font-medium leading-5 tracking-[-0.5px] mb-2">
-          <h5 className="text-neutral-80">Blogs</h5>
+          <h5 className="text-neutral-80 text-xs lg:">Blogs</h5>
           <Image src={ICONS.rightArrowGray} alt="arrow icon" className="w-1 h-2" />
-          <p className="text-neutral-75">{title}</p>
+          <p className="text-neutral-75 text-xs lg:text-base">{title.slice(0, 50).concat("...")}</p>
         </div>
 
         {/* Blog Title */}
-        <h2 className="text-neutral-80 text-[28px] leading-8 font-medium tracking-[-0.05px] mb-2">
+        <h2 className="text-neutral-80 text-[28px] leading-8 font-medium tracking-[-0.05px] mt-4 mb-2">
           {title}
         </h2>
-        <p className="text-neutral-75 text-lg leading-[22px] mb-8 ">
+        <p className="text-neutral-75 text-sm lg:text-lg leading-[22px] mb-8 ">
             Discover how docked drones and AI-powered solutions are transforming infrastructure inspections. Learn about automated workflows, cost-effective operations, and enhanced precision in our webinar recap with gNext.
         </p>
         {/* Blog Image */}

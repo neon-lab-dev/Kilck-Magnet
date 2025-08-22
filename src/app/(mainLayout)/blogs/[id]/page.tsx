@@ -30,10 +30,10 @@ const Page = ({ params }: any) => {
         // descriptionContent={descriptionContent}
       />
 
-      <div className="pl-20 mt-12 py-24">
+      <div className="pl-0 2xl:pl-20 mt-12 py-24">
         <BlogCarousal />
       </div>
-      <FAQ/>
+      <FAQ />
     </div>
   );
 };

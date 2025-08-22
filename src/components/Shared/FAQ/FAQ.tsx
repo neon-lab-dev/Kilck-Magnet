@@ -31,7 +31,7 @@ const FAQ = () => {
   return (
     <Container>
       <div className="font-Satoshi flex flex-col lg:flex-row gap-8 lg:gap-0 justify-between w-full container-padding">
-        <h1 className="text-2xl md:text-[36px] font-bold leading-8 md:leading-10 text-neutral-85 max-w-[300px]">
+        <h1 className="text-2xl md:text-[36px] font-bold leading-8 md:leading-10 text-neutral-85 max-w-full xl:max-w-[300px]">
           Frequently Asked Questions
         </h1>
         <div className="flex flex-col gap-5">
